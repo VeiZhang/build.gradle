@@ -1,0 +1,65 @@
+import java.text.SimpleDateFormat
+import java.util.regex.Matcher
+import java.util.regex.Pattern
+
+ext {
+    // 配置
+    android = [
+            /*************************原生配置*************************/
+            compileSdkVersion       : 25,
+            buildToolsVersion       : "25.0.0",
+            minSdkVersion           : 17,
+            targetSdkVersion        : 23,
+            versionCode             : getSvnVersionCode(),
+            versionName             : getVersionName(),
+
+            /*************************自定义配置*************************/
+            androidSupportSdkVersion: "23.0.0"
+    ]
+
+    // 依赖
+    dependencies = [
+            /*************************原生依赖*************************/
+            "appcompat-v7"   : "com.android.support:appcompat-v7:${android["androidSupportSdkVersion"]}",
+            "support-v4"     : "com.android.support:support-v4:${android["androidSupportSdkVersion"]}",
+            "cardview-v7"    : "com.android.support:cardview-v7:${android["androidSupportSdkVersion"]}",
+            "recyclerview-v7": "com.android.support:recyclerview-v7:${android["androidSupportSdkVersion"]}",
+            "design"         : "com.android.support:design:${android["androidSupportSdkVersion"]}",
+            "annotations"    : "com.android.support:support-annotations:${android["androidSupportSdkVersion"]}",
+            "gridlayout-v7"  : "com.android.support:gridlayout-v7:${android["androidSupportSdkVersion"]}",
+
+            /*************************第三方依赖*************************/
+            "basetools"      : "com.excellence:basetools:1.2.5",
+            "commons-lang3"  : "org.apache.commons:commons-lang3:3.3.2",
+            "rxjava"         : 'io.reactivex:rxjava:1.3.0',
+            "rxandroid"      : 'io.reactivex:rxandroid:1.2.1',
+            "gson"           : "com.google.code.gson:gson:2.2.4"
+    ]
+}
+
+def getVersionName() {
+    String prefix = "1.0." + getSvnVersionCode()
+    return prefix + ' [' + getDate() + ']'
+}
+
+def getSvnVersionCode() {
+    def process = ("svnversion -c " + getBuildDir().parent).execute()
+    process.waitFor()
+    def version = process.in.text
+    Pattern pattern = Pattern.compile("(\\d+:)?(\\d+)\\D")
+    Matcher matcher = pattern.matcher(version)
+    if (matcher.find()) {
+        version = matcher.group(matcher.groupCount())
+    }
+    try {
+        return Integer.parseInt(version)
+    } catch (e) {
+        println e.getMessage()
+    }
+    return 0
+}
+
+def static getDate() {
+    String date = new SimpleDateFormat("MMddyyyy").format(new Date())
+    return date
+}

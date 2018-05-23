@@ -122,7 +122,7 @@ dependencies {
 
 ## 远程配置
 
-远程配置配置其他步骤与**[本地配置](#本地配置)**是一样，不同的是引用的方式，导入的不是路径里的文件，而是一个文件链接
+远程配置配置其他步骤与[本地配置](#本地配置)是一样，不同的是引用的方式，导入的不是路径里的文件，而是一个文件链接
 
 ```
 apply from: "https://github.com/VeiZhang/build.gradle/blob/master/config.gradle?raw=true"

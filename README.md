@@ -122,13 +122,13 @@ dependencies {
 
 ## 远程配置
 
-* 远程配置配置其他步骤与**[本地配置](#本地配置)**是一样，不同的是引用的方式，导入的不是路径里的文件，而是一个文件链接
+远程配置配置其他步骤与**[本地配置](#本地配置)**是一样，不同的是引用的方式，导入的不是路径里的文件，而是一个文件链接
 
-	```
-	apply from: "https://github.com/VeiZhang/build.gradle/blob/master/config.gradle?raw=true"
-	```
-	
-	![远程配置引用][远程配置引用]
+```
+apply from: "https://github.com/VeiZhang/build.gradle/blob/master/config.gradle?raw=true"
+```
+
+![远程配置引用][远程配置引用]
 
 
 ## 继承方式
@@ -144,5 +144,5 @@ dependencies {
 [config.gradle]:https://github.com/VeiZhang/build.gradle/blob/master/images/config.gradle.png?raw=true "config.gradle"
 [config引用]:https://github.com/VeiZhang/build.gradle/blob/master/images/config引用.png?raw=true "config引用"
 [config使用]:https://github.com/VeiZhang/build.gradle/blob/master/images/config使用.png?raw=true "config使用"
-[远程配置引用]:https://github.com/VeiZhang/build.gradle/blob/master/远程配置引用.png?raw=true "远程配置引用"
-[继承方式]:https://github.com/VeiZhang/build.gradle/blob/master/继承方式.png?raw=true "继承方式"
+[远程配置引用]:https://github.com/VeiZhang/build.gradle/blob/master/images/%E8%BF%9C%E7%A8%8B%E9%85%8D%E7%BD%AE%E5%BC%95%E7%94%A8.png?raw=true "远程配置引用"
+[继承方式]:https://github.com/VeiZhang/build.gradle/blob/master/images/%E8%BF%9C%E7%A8%8B%E9%85%8D%E7%BD%AE%E5%BC%95%E7%94%A8.png?raw=true "继承方式"

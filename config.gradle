@@ -65,17 +65,24 @@ ext {
             "rxjava"           : "io.reactivex:rxjava:1.3.0",
             "rxjava2"          : "io.reactivex.rxjava2:rxjava:x.y.z",
             "rxandroid"        : "io.reactivex:rxandroid:1.2.1",
-            
+
             "gson"             : "com.google.code.gson:gson:2.2.4",
             "commons-lang3"    : "org.apache.commons:commons-lang3:3.3.2",
 
             /*************************个人依赖*************************/
+            // https://github.com/VeiZhang/BaseToolsLibrary
             "basetools"        : "com.excellence:basetools:1.2.5",
+            // https://github.com/VeiZhang/Permission
             "permission"       : "com.excellence:permission:1.0.1",
+            // https://github.com/VeiZhang/RetrofitClient
             "retrofit-client"  : "com.excellence:retrofit:1.0.1",
+            // https://github.com/VeiZhang/QSkinLoader
             "skinloader"       : "com.excellence:skinloader:1.2.2",
+            // https://github.com/VeiZhang/ToastKit
             "toast"            : "com.excellence:toast:1.0.0",
+            // https://github.com/VeiZhang/MailSender
             "mailsender"       : "com.excellence:mailsender:1.0.0",
+            // https://github.com/VeiZhang/Downloader
             "downloader"       : "com.excellence:downloader:1.1.0"
     ]
 }

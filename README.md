@@ -42,6 +42,17 @@ dependencies {
 	import java.util.regex.Pattern
 	
 	ext {
+	    // 插件
+	    plugins = [
+	            application      : "com.android.application",
+	            library          : "com.android.library",
+	            maven            : "com.github.dcendents.android-maven",
+	            bintray          : "com.jfrog.bintray",
+	            novoda           : "com.novoda.bintray-release",
+	            greendao         : "org.greenrobot.greendao",
+	            'greendao-gradle': "org.greenrobot:greendao-gradle-plugin:3.2.2"
+	    ]
+	
 	    // 配置
 	    android = [
 	            /*************************原生配置*************************/
@@ -59,20 +70,59 @@ dependencies {
 	    // 依赖
 	    dependencies = [
 	            /*************************原生依赖*************************/
-	            "appcompat-v7"   : "com.android.support:appcompat-v7:${android["androidSupportSdkVersion"]}",
-	            "support-v4"     : "com.android.support:support-v4:${android["androidSupportSdkVersion"]}",
-	            "cardview-v7"    : "com.android.support:cardview-v7:${android["androidSupportSdkVersion"]}",
-	            "recyclerview-v7": "com.android.support:recyclerview-v7:${android["androidSupportSdkVersion"]}",
-	            "design"         : "com.android.support:design:${android["androidSupportSdkVersion"]}",
-	            "annotations"    : "com.android.support:support-annotations:${android["androidSupportSdkVersion"]}",
-	            "gridlayout-v7"  : "com.android.support:gridlayout-v7:${android["androidSupportSdkVersion"]}",
+	            "appcompat-v7"     : "com.android.support:appcompat-v7:${android["androidSupportSdkVersion"]}",
+	            "support-v4"       : "com.android.support:support-v4:${android["androidSupportSdkVersion"]}",
+	            "cardview-v7"      : "com.android.support:cardview-v7:${android["androidSupportSdkVersion"]}",
+	            "recyclerview-v7"  : "com.android.support:recyclerview-v7:${android["androidSupportSdkVersion"]}",
+	            "design"           : "com.android.support:design:${android["androidSupportSdkVersion"]}",
+	            "annotations"      : "com.android.support:support-annotations:${android["androidSupportSdkVersion"]}",
+	            "gridlayout-v7"    : "com.android.support:gridlayout-v7:${android["androidSupportSdkVersion"]}",
 	
 	            /*************************第三方依赖*************************/
-	            "basetools"      : "com.excellence:basetools:1.2.5",
-	            "commons-lang3"  : "org.apache.commons:commons-lang3:3.3.2",
-	            "rxjava"         : 'io.reactivex:rxjava:1.3.0',
-	            "rxandroid"      : 'io.reactivex:rxandroid:1.2.1',
-	            "gson"           : "com.google.code.gson:gson:2.2.4"
+	            // https://github.com/square/retrofit
+	            "retrofit2"        : "com.squareup.retrofit2:retrofit:2.2.0",
+	            "converter-scalars": "com.squareup.retrofit2:converter-scalars:2.2.0",
+	            "converter-gson"   : "com.squareup.retrofit2:converter-gson:2.2.0",
+	            "adapter-rxjava"   : "com.squareup.retrofit2:adapter-rxjava:2.2.0",
+	            // https://github.com/square/okhttp
+	            "okhttp"           : "com.squareup.okhttp3:okhttp:3.10.0",
+	            // https://github.com/greenrobot/greenDAO
+	            "greendao"         : "org.greenrobot:greendao:3.2.2",
+	            // https://github.com/bumptech/glide
+	            "glide"            : "com.github.bumptech.glide:glide:4.7.1",
+	            // https://github.com/square/picasso
+	            "picasso"          : "com.squareup.picasso:picasso:2.71828",
+	            // https://github.com/facebook/fresco
+	            "fresco"           : "com.facebook.fresco:fresco:1.9.0",
+	            // https://github.com/greenrobot/EventBus
+	            "eventbus"         : "org.greenrobot:eventbus:3.1.1",
+	            // https://bugly.qq.com/docs/user-guide/instruction-manual-android/?v=20170912151050
+	            "bugly"            : "com.tencent.bugly:crashreport:latest.release",
+	            // https://bintray.com/android/android-utils/com.android.volley.volley
+	            "volley"           : "com.android.volley:volley:1.1.0",
+	            // https://github.com/ReactiveX/RxJava
+	            "rxjava"           : "io.reactivex:rxjava:1.3.0",
+	            "rxjava2"          : "io.reactivex.rxjava2:rxjava:x.y.z",
+	            "rxandroid"        : "io.reactivex:rxandroid:1.2.1",
+	
+	            "gson"             : "com.google.code.gson:gson:2.2.4",
+	            "commons-lang3"    : "org.apache.commons:commons-lang3:3.3.2",
+	
+	            /*************************个人依赖*************************/
+	            // https://github.com/VeiZhang/BaseToolsLibrary
+	            "basetools"        : "com.excellence:basetools:1.2.5",
+	            // https://github.com/VeiZhang/Permission
+	            "permission"       : "com.excellence:permission:1.0.1",
+	            // https://github.com/VeiZhang/RetrofitClient
+	            "retrofit-client"  : "com.excellence:retrofit:1.0.1",
+	            // https://github.com/VeiZhang/QSkinLoader
+	            "skinloader"       : "com.excellence:skinloader:1.2.2",
+	            // https://github.com/VeiZhang/ToastKit
+	            "toast"            : "com.excellence:toast:1.0.0",
+	            // https://github.com/VeiZhang/MailSender
+	            "mailsender"       : "com.excellence:mailsender:1.0.0",
+	            // https://github.com/VeiZhang/Downloader
+	            "downloader"       : "com.excellence:downloader:1.1.0"
 	    ]
 	}
 	
@@ -81,6 +131,7 @@ dependencies {
 	    return prefix + ' [' + getDate() + ']'
 	}
 	
+	// 根据svn提交版本生成版本号
 	def getSvnVersionCode() {
 	    def process = ("svnversion -c " + getBuildDir().parent).execute()
 	    process.waitFor()
@@ -106,7 +157,11 @@ dependencies {
 
 	![config.gradle][config.gradle]
 
-* 在项目根目录的build.gradle中引用，供其他的Module使用；只想让单独的Module使用，则在该Module的build.gradle里引入
+* 在项目根目录的build.gradle中引用，供其他的Module使用
+
+	**注意：** 
+	1. **如果想使用ext的值，则只能在项目根目录的build.gradle中引用**
+	2. 想让单独的Module使用，则在该Module的build.gradle里引入，但是此时不能使用ext的值，否则会提示无法找到"Error:Cannot get property 'xxx' on extra properties extension as it does not exist"
 
 	```
 	apply from: "config.gradle"

@@ -1,3 +1,9 @@
+/********************* 备注 *****************************/
+/**
+ * 如果是发布依赖，则不能使用 "apply from: 'library.gradle'"，会提示：bintrayUpload: Could not find publication: release
+ * 仅适用普通的library
+ */
+
 apply from: "https://github.com/VeiZhang/build.gradle/blob/master/config.gradle?raw=true"
 /*********************library通用配置*********************/
 def plugins = rootProject.ext.plugins

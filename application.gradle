@@ -39,4 +39,5 @@ dependencies {
     testCompile 'junit:junit:4.12'
     compile libs["appcompat-v7"]
     compile libs["recyclerview-v7"]
+    compile libs["constraint-layout"]
 }

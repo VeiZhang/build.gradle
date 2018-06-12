@@ -1,17 +1,15 @@
 apply from: "https://github.com/VeiZhang/build.gradle/blob/master/config.gradle?raw=true"
-/*********************application通用配置*********************/
+/*********************通用配置*********************/
 def plugins = rootProject.ext.plugins
 def cfg = rootProject.ext.android
 def libs = rootProject.ext.dependencies
 
-apply plugin: plugins.application
+apply plugin: plugins.library
 
 android {
     compileSdkVersion cfg.compileSdkVersion
     buildToolsVersion cfg.buildToolsVersion
     defaultConfig {
-        // 必须重写
-        applicationId "com.excellence"
         minSdkVersion cfg.minSdkVersion
         targetSdkVersion cfg.targetSdkVersion
         versionCode cfg.versionCode
@@ -32,5 +30,4 @@ dependencies {
     })
     testCompile 'junit:junit:4.12'
     compile libs["appcompat-v7"]
-    compile libs["recyclerview-v7"]
 }

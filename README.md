@@ -146,7 +146,7 @@ dependencies {
 	    } catch (e) {
 	        println e.getMessage()
 	    }
-	    return 0
+	    return 1
 	}
 	
 	def static getDate() {

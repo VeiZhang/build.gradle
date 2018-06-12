@@ -1,5 +1,5 @@
 apply from: "https://github.com/VeiZhang/build.gradle/blob/master/config.gradle?raw=true"
-/*********************通用配置*********************/
+/*********************library通用配置*********************/
 def plugins = rootProject.ext.plugins
 def cfg = rootProject.ext.android
 def libs = rootProject.ext.dependencies
@@ -30,4 +30,5 @@ dependencies {
     })
     testCompile 'junit:junit:4.12'
     compile libs["appcompat-v7"]
+    compile libs["recyclerview-v7"]
 }

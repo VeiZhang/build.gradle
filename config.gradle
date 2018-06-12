@@ -87,6 +87,8 @@ ext {
     ]
 }
 
+/***********************通用方法***********************/
+// 获取版本
 def getVersionName() {
     String prefix = "1.0." + getSvnVersionCode()
     return prefix + ' [' + getDate() + ']'
@@ -110,7 +112,8 @@ def getSvnVersionCode() {
     return 1
 }
 
-def static getDate() {
+// 获取日期
+def getDate() {
     String date = new SimpleDateFormat("MMddyyyy").format(new Date())
     return date
 }

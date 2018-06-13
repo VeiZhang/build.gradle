@@ -155,13 +155,13 @@ dependencies {
 	}
 	```
 
-	![config.gradle][config.gradle]
+	![config.gradle][config.gradle示例]
 
 * 在项目根目录的build.gradle中引用，供其他的Module使用
 
 	**注意：** 
 	1. **如果想使用ext的值，则只能在项目根目录的build.gradle中引用**
-	2. 想让单独的Module使用，则在该Module的build.gradle里引入，但是此时不能使用ext的值，否则会提示无法找到**"Error:Cannot get property 'xxx' on extra properties extension as it does not exist"**
+	2. 想让单独的Module使用，则在该Module的build.gradle里引入，但是此时不能使用ext的值，否则会提示无法找到 **"Error:Cannot get property 'xxx' on extra properties extension as it does not exist"**
 
 	```
 	apply from: "config.gradle"
@@ -200,7 +200,7 @@ apply from: "https://github.com/VeiZhang/build.gradle/blob/master/config.gradle?
 * https://github.com/VeiZhang/BaseToolsLibrary 中 [config.gradle][config.gradle]、[application.gradle][application.gradle]
 
 
-[config.gradle]:https://github.com/VeiZhang/build.gradle/blob/master/images/config.gradle.png?raw=true "config.gradle"
+[config.gradle示例]:https://github.com/VeiZhang/build.gradle/blob/master/images/config.gradle.png?raw=true "config.gradle"
 [config引用]:https://github.com/VeiZhang/build.gradle/blob/master/images/config引用.png?raw=true "config引用"
 [config使用]:https://github.com/VeiZhang/build.gradle/blob/master/images/config使用.png?raw=true "config使用"
 [远程配置引用]:https://github.com/VeiZhang/build.gradle/blob/master/images/%E8%BF%9C%E7%A8%8B%E9%85%8D%E7%BD%AE%E5%BC%95%E7%94%A8.png?raw=true "远程配置引用"

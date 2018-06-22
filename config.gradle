@@ -80,7 +80,7 @@ ext {
             // https://github.com/VeiZhang/QSkinLoader
             "skinloader"       : "com.excellence:skinloader:1.2.2",
             // https://github.com/VeiZhang/ToastKit
-            "toast"            : "com.excellence:toast:1.0.0",
+            "toast"            : "com.excellence:toast:1.1.0",
             // https://github.com/VeiZhang/MailSender
             "mailsender"       : "com.excellence:mailsender:1.0.0",
             // https://github.com/VeiZhang/Downloader

@@ -102,7 +102,7 @@ dependencies {
 	            "volley"           : "com.android.volley:volley:1.1.0",
 	            // https://github.com/ReactiveX/RxJava
 	            "rxjava"           : "io.reactivex:rxjava:1.3.0",
-	            "rxjava2"          : "io.reactivex.rxjava2:rxjava:x.y.z",
+	            "rxjava2"          : "io.reactivex.rxjava2:rxjava:2.1.16",
 	            "rxandroid"        : "io.reactivex:rxandroid:1.2.1",
 	
 	            "gson"             : "com.google.code.gson:gson:2.2.4",
@@ -122,7 +122,7 @@ dependencies {
 	            // https://github.com/VeiZhang/MailSender
 	            "mailsender"       : "com.excellence:mailsender:1.0.0",
 	            // https://github.com/VeiZhang/Downloader
-	            "downloader"       : "com.excellence:downloader:1.1.0"
+	            "downloader"       : "com.excellence:downloader:1.2.0"
 	    ]
 	}
 	

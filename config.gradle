@@ -84,7 +84,7 @@ ext {
             // https://github.com/VeiZhang/MailSender
             "mailsender"       : "com.excellence:mailsender:1.0.0",
             // https://github.com/VeiZhang/Downloader
-            "downloader"       : "com.excellence:downloader:1.1.0"
+            "downloader"       : "com.excellence:downloader:1.2.0"
     ]
 }
 

@@ -114,7 +114,7 @@ dependencies {
 	            // https://github.com/VeiZhang/Permission
 	            "permission"       : "com.excellence:permission:1.0.1",
 	            // https://github.com/VeiZhang/RetrofitClient
-	            "retrofit-client"  : "com.excellence:retrofit:1.0.1",
+	            "retrofit-client"  : "com.excellence:retrofit:1.0.2",
 	            // https://github.com/VeiZhang/QSkinLoader
 	            "skinloader"       : "com.excellence:skinloader:1.2.2",
 	            // https://github.com/VeiZhang/ToastKit

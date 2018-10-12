@@ -247,6 +247,7 @@ apply from: "https://github.com/VeiZhang/build.gradle/blob/master/config.gradle?
 | [app-statistics][app-statistics] | [![Download][app-statistics_download]][app-statistics_latestVersion] |
 | [exec][exec] | [![Download][exec_download]][exec_latestVersion] |
 | [ffmpeg][ffmpeg] | [![Download][ffmpeg_download]][ffmpeg_latestVersion] |
+| [imageloader][imageloader] | [![Download][imageloader_download]][imageloader_latestVersion] |
 
 [config.gradle示例]:https://github.com/VeiZhang/build.gradle/blob/master/images/config.gradle.png?raw=true "config.gradle"
 [config引用]:https://github.com/VeiZhang/build.gradle/blob/master/images/config引用.png?raw=true "config引用"
@@ -343,4 +344,6 @@ apply from: "https://github.com/VeiZhang/build.gradle/blob/master/config.gradle?
 [ffmpeg]:https://github.com/VeiZhang/AndroidFFmpeg
 [ffmpeg_download]:https://api.bintray.com/packages/veizhang/maven/ffmpeg/images/download.svg
 [ffmpeg_latestVersion]:https://bintray.com/veizhang/maven/ffmpeg/_latestVersion
-
+[imageloader]:https://github.com/VeiZhang/ImageLoader
+[imageloader_download]:https://api.bintray.com/packages/veizhang/maven/imageloader/images/download.svg
+[imageloader_latestVersion]:https://bintray.com/veizhang/maven/imageloader/_latestVersion

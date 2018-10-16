@@ -127,15 +127,15 @@ dependencies {
                 // https://github.com/VeiZhang/Downloader
                 "downloader"          : "com.excellence:downloader:1.2.0",
                 // https://github.com/VeiZhang/AppStatistics
-                "app-statistics"      : "com.excellence:app-statistics:1.0.1"
+                "app-statistics"      : "com.excellence:app-statistics:1.0.1",
                 // https://github.com/VeiZhang/AndroidExec
-                "exec"                : "com.excellence:exec:1.1.0"
+                "exec"                : "com.excellence:exec:1.1.0",
                 // https://github.com/VeiZhang/AndroidFFmpeg
-                "ffmpeg"              : "com.excellence:ffmpeg:1.1.0"
+                "ffmpeg"              : "com.excellence:ffmpeg:1.1.0",
                 // https://github.com/VeiZhang/ImageLoader
-                "imageloader"         : "com.excellence:imageloader:1.0.0"
-                "imageloader-fresco"  : "com.excellence:imageloader-fresco:1.0.0"
-                "imageloader-picasso" : "com.excellence:imageloader-picasso:1.0.0"
+                "imageloader"         : "com.excellence:imageloader:1.0.0",
+                "imageloader-fresco"  : "com.excellence:imageloader-fresco:1.0.0",
+                "imageloader-picasso" : "com.excellence:imageloader-picasso:1.0.0",
                 "imageloader-glide"   : "com.excellence:imageloader-glide:1.0.0"
         ]
     }

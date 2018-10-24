@@ -110,7 +110,11 @@ dependencies {
                 "gson"              : "com.google.code.gson:gson:2.8.5",
                 // https://github.com/apache/commons-lang
                 "commons-lang3"     : "org.apache.commons:commons-lang3:3.8",
-
+            
+                /*************************比较好的第三方轮子*************************/
+                // https://github.com/YoKeyword/Fragmentation
+                "fragmentation"     : "me.yokeyword:fragmentation:1.3.6",
+            
                 /*************************个人依赖*************************/
                 // https://github.com/VeiZhang/BaseToolsLibrary
                 "basetools"           : "com.excellence:basetools:1.2.6",

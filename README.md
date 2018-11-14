@@ -106,6 +106,7 @@ dependencies {
                 "rxjava"            : "io.reactivex:rxjava:1.3.8",
                 "rxjava2"           : "io.reactivex.rxjava2:rxjava:2.2.2",
                 "rxandroid"         : "io.reactivex:rxandroid:2.1.0",
+                "rxandroid2"        : 'io.reactivex.rxjava2:rxandroid:2.0.2',
                 // https://github.com/google/gson
                 "gson"              : "com.google.code.gson:gson:2.8.5",
                 // https://github.com/apache/commons-lang

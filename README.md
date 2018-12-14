@@ -81,40 +81,45 @@ dependencies {
 
                 /*************************第三方依赖*************************/
                 // https://github.com/square/retrofit
-                "retrofit2"         : "com.squareup.retrofit2:retrofit:2.4.0",
-                "converter-scalars" : "com.squareup.retrofit2:converter-scalars:2.4.0",
-                "converter-gson"    : "com.squareup.retrofit2:converter-gson:2.4.0",
-                "adapter-rxjava"    : "com.squareup.retrofit2:adapter-rxjava:2.4.0",
-                "adapter-rxjava2"   : "com.squareup.retrofit2:adapter-rxjava2:2.4.0",
+                "retrofit2"           : "com.squareup.retrofit2:retrofit:2.4.0",
+                "converter-scalars"   : "com.squareup.retrofit2:converter-scalars:2.4.0",
+                "converter-gson"      : "com.squareup.retrofit2:converter-gson:2.4.0",
+                "adapter-rxjava"      : "com.squareup.retrofit2:adapter-rxjava:2.4.0",
+                "adapter-rxjava2"     : "com.squareup.retrofit2:adapter-rxjava2:2.4.0",
                 // https://github.com/square/okhttp
-                "okhttp"            : "com.squareup.okhttp3:okhttp:3.11.0",
+                "okhttp"              : "com.squareup.okhttp3:okhttp:3.11.0",
                 // https://github.com/greenrobot/greenDAO
-                "greendao"          : "org.greenrobot:greendao:3.2.2",
+                "greendao"            : "org.greenrobot:greendao:3.2.2",
+                // https://github.com/yuweiguocn/GreenDaoUpgradeHelper
+                "greendao-helper"     : "com.github.yuweiguocn:GreenDaoUpgradeHelper:v2.1.0",
                 // https://github.com/bumptech/glide
-                "glide"             : "com.github.bumptech.glide:glide:4.8.0",
+                "glide"               : "com.github.bumptech.glide:glide:4.8.0",
                 // https://github.com/square/picasso
-                "picasso"           : "com.squareup.picasso:picasso:2.71828",
+                "picasso"             : "com.squareup.picasso:picasso:2.71828",
                 // https://github.com/facebook/fresco
-                "fresco"            : "com.facebook.fresco:fresco:1.10.0",
+                "fresco"              : "com.facebook.fresco:fresco:1.10.0",
                 // https://github.com/greenrobot/EventBus
-                "eventbus"          : "org.greenrobot:eventbus:3.1.1",
+                "eventbus"            : "org.greenrobot:eventbus:3.1.1",
                 // https://github.com/BuglyDevTeam/Bugly-Android
-                "bugly"             : "com.tencent.bugly:crashreport:latest.release",
+                "bugly"               : "com.tencent.bugly:crashreport:2.6.6.1",
+                "bugly-native"        : "com.tencent.bugly:nativecrashreport:3.3.1",
                 // https://bintray.com/android/android-utils/com.android.volley.volley
-                "volley"            : "com.android.volley:volley:1.1.1",
+                "volley"              : "com.android.volley:volley:1.1.1",
                 // https://github.com/ReactiveX/RxJava
-                "rxjava"            : "io.reactivex:rxjava:1.3.8",
-                "rxjava2"           : "io.reactivex.rxjava2:rxjava:2.2.2",
-                "rxandroid"         : "io.reactivex:rxandroid:2.1.0",
-                "rxandroid2"        : 'io.reactivex.rxjava2:rxandroid:2.0.2',
+                "rxjava"              : "io.reactivex:rxjava:1.3.8",
+                "rxjava2"             : "io.reactivex.rxjava2:rxjava:2.2.2",
+                "rxandroid"           : "io.reactivex:rxandroid:2.1.0",
+                "rxandroid2"          : 'io.reactivex.rxjava2:rxandroid:2.0.2',
                 // https://github.com/google/gson
-                "gson"              : "com.google.code.gson:gson:2.8.5",
+                "gson"                : "com.google.code.gson:gson:2.8.5",
                 // https://github.com/apache/commons-lang
-                "commons-lang3"     : "org.apache.commons:commons-lang3:3.8",
-            
-                /*************************比较好的第三方轮子*************************/
+                "commons-lang3"       : "org.apache.commons:commons-lang3:3.8",
+                // https://github.com/square/leakcanary
+                "leakcanary"          : "com.squareup.leakcanary:leakcanary-android:1.6.2",
+                "leakcanary-release"  : "com.squareup.leakcanary:leakcanary-android-no-op:1.6.2",
+                "leakcanary-fragment" : "com.squareup.leakcanary:leakcanary-support-fragment:1.6.2",
                 // https://github.com/YoKeyword/Fragmentation
-                "fragmentation"     : "me.yokeyword:fragmentation:1.3.6",
+                "fragmentation"       : "me.yokeyword:fragmentation:1.3.6",
             
                 /*************************个人依赖*************************/
                 // https://github.com/VeiZhang/BaseToolsLibrary
@@ -122,7 +127,7 @@ dependencies {
                 // https://github.com/VeiZhang/Permission
                 "permission"          : "com.excellence:permission:1.0.1",
                 // https://github.com/VeiZhang/RetrofitClient
-                "retrofit-client"     : "com.excellence:retrofit:1.0.3",
+                "retrofit-client"     : "com.excellence:retrofit:1.0.5",
                 // https://github.com/VeiZhang/QSkinLoader
                 "skinloader"          : "com.excellence:skinloader:1.2.2",
                 // https://github.com/VeiZhang/ToastKit
@@ -231,17 +236,22 @@ apply from: "https://github.com/VeiZhang/build.gradle/blob/master/config.gradle?
 | [okhttp][okhttp] | [![Download][okhttp_download]][okhttp_latestVersion] |
 | [logging-interceptor][logging-interceptor] | [![Download][logging-interceptor_download]][logging-interceptor_latestVersion] |
 | [greendao][greendao] | [![Download][greendao_download]][greendao_latestVersion] |
+| [greendao-helper][greendao-helper] | [![Download][greendao-helper_download]][greendao-helper_latestVersion] |
 | [glide][glide] | [![Download][glide_download]][glide_latestVersion] |
 | [picasso][picasso] | [![Download][picasso_download]][picasso_latestVersion] |
 | [fresco][fresco] | [![Download][fresco_download]][fresco_latestVersion] |
 | [eventbus][eventbus] | [![Download][eventbus_download]][eventbus_latestVersion] |
 | [bugly][bugly] | [![Download][bugly_download]][bugly_latestVersion] |
+| [bugly-native][bugly-native] | [![Download][bugly-native_download]][bugly-native_latestVersion] |
 | [volley][volley] | [![Download][volley_download]][volley_latestVersion] |
 | [rxjava][rxjava] | [![Download][rxjava_download]][rxjava_latestVersion] |
 | [rxjava2][rxjava2] | [![Download][rxjava2_download]][rxjava2_latestVersion] |
 | [rxandroid][rxandroid] | [![Download][rxandroid_download]][rxandroid_latestVersion] |
 | [gson][gson] | [![Download][gson_download]][gson_latestVersion] |
 | [commons-lang3][commons-lang3] | [![Download][commons-lang3_download]][commons-lang3_latestVersion] |
+| [leakcanary][leakcanary] | [![Download][leakcanary_download]][leakcanary_latestVersion] |
+| [leakcanary-release][leakcanary-release] | [![Download][leakcanary-release_download]][leakcanary-release_latestVersion] |
+| [leakcanary-fragment][leakcanary-fragment] | [![Download][leakcanary-fragment_download]][leakcanary-fragment_latestVersion] |
 | [basetools][basetools] | [![Download][basetools_download]][basetools_latestVersion] |
 | [permission][permission] | [![Download][permission_download]][permission_latestVersion] |
 | [retrofit-client][retrofit-client] | [![Download][retrofit-client_download]][retrofit-client_latestVersion] |
@@ -286,6 +296,9 @@ apply from: "https://github.com/VeiZhang/build.gradle/blob/master/config.gradle?
 [greendao]:https://github.com/greenrobot/greenDAO
 [greendao_download]:https://api.bintray.com/packages/bintray/jcenter/org.greenrobot%3Agreendao-gradle-plugin/images/download.svg
 [greendao_latestVersion]:https://bintray.com/bintray/jcenter/org.greenrobot%3Agreendao-gradle-plugin/_latestVersion
+[greendao-helper]:https://github.com/yuweiguocn/GreenDaoUpgradeHelper
+[greendao-helper_download]:https://api.bintray.com/packages/yuweiguocn/maven/GreenDaoUpgradeHelper/images/download.svg
+[greendao-helper__latestVersion]:https://bintray.com/yuweiguocn/maven/GreenDaoUpgradeHelper/_latestVersion
 [glide]:https://github.com/bumptech/glide
 [glide_download]:https://api.bintray.com/packages/bintray/jcenter/com.github.bumptech.glide%3Aglide/images/download.svg
 [glide_latestVersion]:https://bintray.com/bintray/jcenter/com.github.bumptech.glide%3Aglide/_latestVersion
@@ -301,6 +314,9 @@ apply from: "https://github.com/VeiZhang/build.gradle/blob/master/config.gradle?
 [bugly]:https://github.com/BuglyDevTeam/Bugly-Android
 [bugly_download]:https://api.bintray.com/packages/bugly/maven/CrashReport/images/download.svg
 [bugly_latestVersion]:https://bintray.com/bugly/maven/CrashReport/_latestVersion
+[bugly-native]:https://github.com/BuglyDevTeam/Bugly-Android-NDK
+[bugly-native_download]:https://api.bintray.com/packages/bugly/maven/NativeCrashReport/images/download.svg
+[bugly-native_latestVersion]:https://bintray.com/bugly/maven/NativeCrashReport/_latestVersion
 [volley]:https://github.com/google/volley
 [volley_download]:https://api.bintray.com/packages/android/android-utils/com.android.volley.volley/images/download.svg
 [volley_latestVersion]:https://bintray.com/android/android-utils/com.android.volley.volley/_latestVersion
@@ -319,6 +335,15 @@ apply from: "https://github.com/VeiZhang/build.gradle/blob/master/config.gradle?
 [commons-lang3]:https://github.com/apache/commons-lang
 [commons-lang3_download]:https://api.bintray.com/packages/bintray/jcenter/org.apache.commons%3Acommons-lang3/images/download.svg
 [commons-lang3_latestVersion]:https://bintray.com/bintray/jcenter/org.apache.commons%3Acommons-lang3/_latestVersion
+[leakcanary]:https://github.com/square/leakcanary
+[leakcanary_download]:https://api.bintray.com/packages/pyricau/maven/com.squareup.leakcanary%3Aleakcanary-android/images/download.svg
+[leakcanary_latestVersion]:https://bintray.com/pyricau/maven/com.squareup.leakcanary%3Aleakcanary-android/_latestVersion
+[leakcanary-release]:https://github.com/square/leakcanary
+[leakcanary-release_download]:https://api.bintray.com/packages/pyricau/maven/com.squareup.leakcanary%3Aleakcanary-android-no-op/images/download.svg
+[leakcanary-release_latestVersion]:https://bintray.com/pyricau/maven/com.squareup.leakcanary%3Aleakcanary-android-no-op/_latestVersion
+[leakcanary-fragment]:https://github.com/square/leakcanary
+[leakcanary-fragment_download]:https://api.bintray.com/packages/bintray/jcenter/com.squareup.leakcanary%3Aleakcanary-support-fragment/images/download.svg
+[leakcanary-fragment_latestVersion]:https://bintray.com/bintray/jcenter/com.squareup.leakcanary%3Aleakcanary-support-fragment/_latestVersion
 [basetools]:https://github.com/VeiZhang/BaseToolsLibrary
 [basetools_download]:https://api.bintray.com/packages/veizhang/maven/basetools/images/download.svg
 [basetools_latestVersion]:https://bintray.com/veizhang/maven/basetools/_latestVersion

@@ -298,7 +298,7 @@ apply from: "https://github.com/VeiZhang/build.gradle/blob/master/config.gradle?
 [greendao_latestVersion]:https://bintray.com/bintray/jcenter/org.greenrobot%3Agreendao-gradle-plugin/_latestVersion
 [greendao-helper]:https://github.com/yuweiguocn/GreenDaoUpgradeHelper
 [greendao-helper_download]:https://api.bintray.com/packages/yuweiguocn/maven/GreenDaoUpgradeHelper/images/download.svg
-[greendao-helper__latestVersion]:https://bintray.com/yuweiguocn/maven/GreenDaoUpgradeHelper/_latestVersion
+[greendao-helper_latestVersion]:https://bintray.com/yuweiguocn/maven/GreenDaoUpgradeHelper/_latestVersion
 [glide]:https://github.com/bumptech/glide
 [glide_download]:https://api.bintray.com/packages/bintray/jcenter/com.github.bumptech.glide%3Aglide/images/download.svg
 [glide_latestVersion]:https://bintray.com/bintray/jcenter/com.github.bumptech.glide%3Aglide/_latestVersion

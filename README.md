@@ -110,6 +110,8 @@ dependencies {
                 "rxjava2"             : "io.reactivex.rxjava2:rxjava:2.2.2",
                 "rxandroid"           : "io.reactivex:rxandroid:2.1.0",
                 "rxandroid2"          : 'io.reactivex.rxjava2:rxandroid:2.0.2',
+                // https://github.com/JakeWharton/RxBinding
+                "rxbinding"           : 'com.jakewharton.rxbinding2:rxbinding:2.2.0',
                 // https://github.com/google/gson
                 "gson"                : "com.google.code.gson:gson:2.8.5",
                 // https://github.com/apache/commons-lang
@@ -247,6 +249,7 @@ apply from: "https://github.com/VeiZhang/build.gradle/blob/master/config.gradle?
 | [rxjava][rxjava] | [![Download][rxjava_download]][rxjava_latestVersion] |
 | [rxjava2][rxjava2] | [![Download][rxjava2_download]][rxjava2_latestVersion] |
 | [rxandroid][rxandroid] | [![Download][rxandroid_download]][rxandroid_latestVersion] |
+| [rxbinding][rxbinding] | [![Download][rxbinding_download]][rxbinding_latestVersion] |
 | [gson][gson] | [![Download][gson_download]][gson_latestVersion] |
 | [commons-lang3][commons-lang3] | [![Download][commons-lang3_download]][commons-lang3_latestVersion] |
 | [leakcanary][leakcanary] | [![Download][leakcanary_download]][leakcanary_latestVersion] |
@@ -329,6 +332,9 @@ apply from: "https://github.com/VeiZhang/build.gradle/blob/master/config.gradle?
 [rxandroid]:https://github.com/ReactiveX/RxAndroid
 [rxandroid_download]:https://api.bintray.com/packages/reactivex/RxJava/RxAndroid/images/download.svg
 [rxandroid_latestVersion]:https://bintray.com/reactivex/RxJava/RxAndroid/_latestVersion
+[rxbinding]:https://github.com/JakeWharton/RxBinding
+[rxbinding_download]:https://api.bintray.com/packages/bintray/jcenter/com.jakewharton.rxbinding2%3Arxbinding/images/download.svg
+[rxbinding_latestVersion]:https://bintray.com/bintray/jcenter/com.jakewharton.rxbinding2%3Arxbinding/_latestVersion
 [gson]:https://github.com/google/gson
 [gson_download]:https://api.bintray.com/packages/bintray/jcenter/com.google.code.gson%3Agson/images/download.svg
 [gson_latestVersion]:https://bintray.com/bintray/jcenter/com.google.code.gson%3Agson/_latestVersion

@@ -183,7 +183,10 @@ dependencies {
 	    if (version == 0) {
 	        version = 1
 	    }
-	    return "1.0.${version} [${date}]"
+	    /**
+	     * 错误的版本信息，请检查
+	     */
+	    return "0.${version} [${date}]"
 	}
 	
 	/**

@@ -40,118 +40,120 @@ dependencies {
 	import java.text.SimpleDateFormat
 	import java.util.regex.Matcher
 	import java.util.regex.Pattern
-
-    ext {
-        // 插件
-        plugins = [
-                application       : "com.android.application",
-                library           : "com.android.library",
-                maven             : "com.github.dcendents.android-maven",
-                bintray           : "com.jfrog.bintray",
-                novoda            : "com.novoda.bintray-release",
-                greendao          : "org.greenrobot.greendao",
-                "greendao-gradle" : "org.greenrobot:greendao-gradle-plugin:3.2.2"
-        ]
-
-        // 配置
-        android = [
-                /*************************原生配置*************************/
-                compileSdkVersion       : 25,
-                buildToolsVersion       : "25.0.0",
-                minSdkVersion           : 17,
-                targetSdkVersion        : 23,
-                versionCode             : getVersionCode(),
-                versionName             : getVersionName(),
-
-                /*************************自定义配置*************************/
-                androidSupportSdkVersion: "23.0.0"
-        ]
-
-        // 依赖
-        dependencies = [
-                /*************************原生依赖*************************/
-                "appcompat-v7"      : "com.android.support:appcompat-v7:${android["androidSupportSdkVersion"]}",
-                "support-v4"        : "com.android.support:support-v4:${android["androidSupportSdkVersion"]}",
-                "cardview-v7"       : "com.android.support:cardview-v7:${android["androidSupportSdkVersion"]}",
-                "recyclerview-v7"   : "com.android.support:recyclerview-v7:${android["androidSupportSdkVersion"]}",
-                "design"            : "com.android.support:design:${android["androidSupportSdkVersion"]}",
-                "annotations"       : "com.android.support:support-annotations:${android["androidSupportSdkVersion"]}",
-                "gridlayout-v7"     : "com.android.support:gridlayout-v7:${android["androidSupportSdkVersion"]}",
-                "constraint-layout" : "com.android.support.constraint:constraint-layout:1.0.2",
-
-                /*************************第三方依赖*************************/
-                // https://github.com/square/retrofit
-                "retrofit2"           : "com.squareup.retrofit2:retrofit:2.4.0",
-                "converter-scalars"   : "com.squareup.retrofit2:converter-scalars:2.4.0",
-                "converter-gson"      : "com.squareup.retrofit2:converter-gson:2.4.0",
-                "adapter-rxjava"      : "com.squareup.retrofit2:adapter-rxjava:2.4.0",
-                "adapter-rxjava2"     : "com.squareup.retrofit2:adapter-rxjava2:2.4.0",
-                // https://github.com/square/okhttp
-                "okhttp"              : "com.squareup.okhttp3:okhttp:3.11.0",
-                // https://github.com/greenrobot/greenDAO
-                "greendao"            : "org.greenrobot:greendao:3.2.2",
-                // https://github.com/yuweiguocn/GreenDaoUpgradeHelper
-                "greendao-helper"     : "com.github.yuweiguocn:GreenDaoUpgradeHelper:v2.1.0",
-                // https://github.com/bumptech/glide
-                "glide"               : "com.github.bumptech.glide:glide:4.8.0",
-                // https://github.com/square/picasso
-                "picasso"             : "com.squareup.picasso:picasso:2.71828",
-                // https://github.com/facebook/fresco
-                "fresco"              : "com.facebook.fresco:fresco:1.10.0",
-                // https://github.com/greenrobot/EventBus
-                "eventbus"            : "org.greenrobot:eventbus:3.1.1",
-                // https://github.com/BuglyDevTeam/Bugly-Android
-                "bugly"               : "com.tencent.bugly:crashreport:2.6.6.1",
-                "bugly-native"        : "com.tencent.bugly:nativecrashreport:3.3.1",
-                // https://bintray.com/android/android-utils/com.android.volley.volley
-                "volley"              : "com.android.volley:volley:1.1.1",
-                // https://github.com/ReactiveX/RxJava
-                "rxjava"              : "io.reactivex:rxjava:1.3.8",
-                "rxjava2"             : "io.reactivex.rxjava2:rxjava:2.2.2",
-                "rxandroid"           : "io.reactivex:rxandroid:2.1.0",
-                "rxandroid2"          : 'io.reactivex.rxjava2:rxandroid:2.0.2',
-                // https://github.com/JakeWharton/RxBinding
-                "rxbinding"           : 'com.jakewharton.rxbinding2:rxbinding:2.2.0',
-                // https://github.com/google/gson
-                "gson"                : "com.google.code.gson:gson:2.8.5",
-                // https://github.com/apache/commons-lang
-                "commons-lang3"       : "org.apache.commons:commons-lang3:3.8",
-                // https://github.com/square/leakcanary
-                "leakcanary"          : "com.squareup.leakcanary:leakcanary-android:1.6.2",
-                "leakcanary-release"  : "com.squareup.leakcanary:leakcanary-android-no-op:1.6.2",
-                "leakcanary-fragment" : "com.squareup.leakcanary:leakcanary-support-fragment:1.6.2",
-                // https://github.com/YoKeyword/Fragmentation
-                "fragmentation"       : "me.yokeyword:fragmentation:1.3.6",
-            
-                /*************************个人依赖*************************/
-                // https://github.com/VeiZhang/BaseToolsLibrary
-                "basetools"           : "com.excellence:basetools:1.2.6",
-                // https://github.com/VeiZhang/Permission
-                "permission"          : "com.excellence:permission:1.0.1",
-                // https://github.com/VeiZhang/RetrofitClient
-                "retrofit-client"     : "com.excellence:retrofit:1.0.5",
-                // https://github.com/VeiZhang/QSkinLoader
-                "skinloader"          : "com.excellence:skinloader:1.2.2",
-                // https://github.com/VeiZhang/ToastKit
-                "toast"               : "com.excellence:toast:1.1.0",
-                // https://github.com/VeiZhang/MailSender
-                "mailsender"          : "com.excellence:mailsender:1.0.0",
-                // https://github.com/VeiZhang/Downloader
-                "downloader"          : "com.excellence:downloader:1.2.0",
-                // https://github.com/VeiZhang/AppStatistics
-                "app-statistics"      : "com.excellence:app-statistics:1.0.1",
-                // https://github.com/VeiZhang/AndroidExec
-                "exec"                : "com.excellence:exec:1.1.0",
-                // https://github.com/VeiZhang/AndroidFFmpeg
-                "ffmpeg"              : "com.excellence:ffmpeg:1.1.0",
-                // https://github.com/VeiZhang/ImageLoader
-                "imageloader"         : "com.excellence:imageloader:1.0.0",
-                "imageloader-fresco"  : "com.excellence:imageloader-fresco:1.0.0",
-                "imageloader-picasso" : "com.excellence:imageloader-picasso:1.0.0",
-                "imageloader-glide"   : "com.excellence:imageloader-glide:1.0.0"
-        ]
-    }
-
+	
+	ext {
+	    // 插件
+	    plugins = [
+	            application       : "com.android.application",
+	            library           : "com.android.library",
+	            maven             : "com.github.dcendents.android-maven",
+	            bintray           : "com.jfrog.bintray",
+	            novoda            : "com.novoda.bintray-release",
+	            greendao          : "org.greenrobot.greendao",
+	            "greendao-gradle" : "org.greenrobot:greendao-gradle-plugin:3.2.2"
+	    ]
+	
+	    // 配置
+	    android = [
+	            /*************************原生配置*************************/
+	            compileSdkVersion       : 25,
+	            buildToolsVersion       : "25.0.0",
+	            minSdkVersion           : 17,
+	            targetSdkVersion        : 23,
+	            versionCode             : getVersionCode(),
+	            versionName             : getVersionName(),
+	
+	            /*************************自定义配置*************************/
+	            androidSupportSdkVersion: "23.0.0"
+	    ]
+	
+	    // 依赖
+	    dependencies = [
+	            /*************************原生依赖*************************/
+	            "appcompat-v7"      : "com.android.support:appcompat-v7:${android["androidSupportSdkVersion"]}",
+	            "support-v4"        : "com.android.support:support-v4:${android["androidSupportSdkVersion"]}",
+	            "cardview-v7"       : "com.android.support:cardview-v7:${android["androidSupportSdkVersion"]}",
+	            "recyclerview-v7"   : "com.android.support:recyclerview-v7:${android["androidSupportSdkVersion"]}",
+	            "design"            : "com.android.support:design:${android["androidSupportSdkVersion"]}",
+	            "annotations"       : "com.android.support:support-annotations:${android["androidSupportSdkVersion"]}",
+	            "gridlayout-v7"     : "com.android.support:gridlayout-v7:${android["androidSupportSdkVersion"]}",
+	            "constraint-layout" : "com.android.support.constraint:constraint-layout:1.0.2",
+	
+	            /*************************第三方依赖*************************/
+	            // https://github.com/square/retrofit
+	            "retrofit2"           : "com.squareup.retrofit2:retrofit:2.4.0",
+	            "converter-scalars"   : "com.squareup.retrofit2:converter-scalars:2.4.0",
+	            "converter-gson"      : "com.squareup.retrofit2:converter-gson:2.4.0",
+	            "adapter-rxjava"      : "com.squareup.retrofit2:adapter-rxjava:2.4.0",
+	            "adapter-rxjava2"     : "com.squareup.retrofit2:adapter-rxjava2:2.4.0",
+	            // https://github.com/square/okhttp
+	            "okhttp"              : "com.squareup.okhttp3:okhttp:3.11.0",
+	            // https://github.com/greenrobot/greenDAO
+	            "greendao"            : "org.greenrobot:greendao:3.2.2",
+	            // https://github.com/yuweiguocn/GreenDaoUpgradeHelper
+	            "greendao-helper"     : "com.github.yuweiguocn:GreenDaoUpgradeHelper:v2.1.0",
+	            // https://github.com/bumptech/glide
+	            "glide"               : "com.github.bumptech.glide:glide:4.8.0",
+	            // https://github.com/square/picasso
+	            "picasso"             : "com.squareup.picasso:picasso:2.71828",
+	            // https://github.com/facebook/fresco
+	            "fresco"              : "com.facebook.fresco:fresco:1.10.0",
+	            // https://github.com/greenrobot/EventBus
+	            "eventbus"            : "org.greenrobot:eventbus:3.1.1",
+	            // https://github.com/BuglyDevTeam/Bugly-Android
+	            "bugly"               : "com.tencent.bugly:crashreport:2.6.6.1",
+	            "bugly-native"        : "com.tencent.bugly:nativecrashreport:3.3.1",
+	            // https://bintray.com/android/android-utils/com.android.volley.volley
+	            "volley"              : "com.android.volley:volley:1.1.1",
+	            // https://github.com/ReactiveX/RxJava
+	            "rxjava"              : "io.reactivex:rxjava:1.3.8",
+	            "rxjava2"             : "io.reactivex.rxjava2:rxjava:2.2.2",
+	            "rxandroid"           : "io.reactivex:rxandroid:2.1.0",
+	            "rxandroid2"          : 'io.reactivex.rxjava2:rxandroid:2.0.2',
+	            // https://github.com/JakeWharton/RxBinding
+	            "rxbinding"           : 'com.jakewharton.rxbinding2:rxbinding:2.2.0',
+	            // https://github.com/google/gson
+	            "gson"                : "com.google.code.gson:gson:2.8.5",
+	            // https://github.com/alibaba/fastjson
+	            "fastjson"            : "com.alibaba:fastjson:1.1.70.android",
+	            // https://github.com/apache/commons-lang
+	            "commons-lang3"       : "org.apache.commons:commons-lang3:3.8",
+	            // https://github.com/square/leakcanary
+	            "leakcanary"          : "com.squareup.leakcanary:leakcanary-android:1.6.2",
+	            "leakcanary-release"  : "com.squareup.leakcanary:leakcanary-android-no-op:1.6.2",
+	            "leakcanary-fragment" : "com.squareup.leakcanary:leakcanary-support-fragment:1.6.2",
+	            // https://github.com/YoKeyword/Fragmentation
+	            "fragmentation"       : "me.yokeyword:fragmentation:1.3.6",
+	
+	            /*************************个人依赖*************************/
+	            // https://github.com/VeiZhang/BaseToolsLibrary
+	            "basetools"           : "com.excellence:basetools:1.2.6",
+	            // https://github.com/VeiZhang/Permission
+	            "permission"          : "com.excellence:permission:1.0.1",
+	            // https://github.com/VeiZhang/RetrofitClient
+	            "retrofit-client"     : "com.excellence:retrofit:1.0.5",
+	            // https://github.com/VeiZhang/QSkinLoader
+	            "skinloader"          : "com.excellence:skinloader:1.2.2",
+	            // https://github.com/VeiZhang/ToastKit
+	            "toast"               : "com.excellence:toast:1.1.0",
+	            // https://github.com/VeiZhang/MailSender
+	            "mailsender"          : "com.excellence:mailsender:1.0.0",
+	            // https://github.com/VeiZhang/Downloader
+	            "downloader"          : "com.excellence:downloader:1.2.0",
+	            // https://github.com/VeiZhang/AppStatistics
+	            "app-statistics"      : "com.excellence:app-statistics:1.0.1",
+	            // https://github.com/VeiZhang/AndroidExec
+	            "exec"                : "com.excellence:exec:1.1.0",
+	            // https://github.com/VeiZhang/AndroidFFmpeg
+	            "ffmpeg"              : "com.excellence:ffmpeg:1.1.0",
+	            // https://github.com/VeiZhang/ImageLoader
+	            "imageloader"         : "com.excellence:imageloader:1.0.0",
+	            "imageloader-fresco"  : "com.excellence:imageloader-fresco:1.0.0",
+	            "imageloader-picasso" : "com.excellence:imageloader-picasso:1.0.0",
+	            "imageloader-glide"   : "com.excellence:imageloader-glide:1.0.0"
+	    ]
+	}
+	
 	/***********************APP版本控制的通用方法***********************/
 	/**
 	 * svn
@@ -162,8 +164,8 @@ dependencies {
 	 *
 	 * git tag作为版本名称
 	 * git 版本号有两种方法
-	 *  ①版本号作为我们内部开发的标识，一般它是+1递增的，每一次发版我们就会打一个tag，tag的数量也会增加1个，和我们版本号的递增逻辑是符合的，tag数量+1，版本号也会跟着+1
-	 *  ②还有一种是把提交次数作为versionCode，不推荐。相比较①，②比较难找，因为tag的数量不会很多
+	 *  ①一种是把提交次数作为versionCode
+	 *  ②另外一种是把tag的数量作为versionCode
 	 */
 	
 	/**
@@ -207,17 +209,14 @@ dependencies {
 	/***********************读取Git信息***********************/
 	
 	/**
-	 * 读取git tag
+	 * 读取最近的一次git tag
 	 * @return tag
 	 */
 	def getGitTag() {
 	    try {
-	        def stdout = new ByteArrayOutputStream()
-	        exec {
-	            commandLine 'git', 'describe', '--abbrev=0', '--tags'
-	            standardOutput = stdout
-	        }
-	        return stdout.toString().split("\n")
+	        def process = ("git describe --abbrev=0 --tags").execute()
+	        def tag = process.text.trim()
+	        return tag
 	    } catch (e) {
 	        println e.getMessage()
 	    }
@@ -230,12 +229,9 @@ dependencies {
 	 */
 	def getGitVersionCode() {
 	    try {
-	        def stdout = new ByteArrayOutputStream()
-	        exec {
-	            commandLine 'git', 'tag', '--list'
-	            standardOutput = stdout
-	        }
-	        return stdout.toString().split("\n").size()
+	        def process = ("git rev-list HEAD --first-parent --count").execute()
+	        def version = process.text.trim().toInteger()
+	        return version
 	    } catch (e) {
 	        println e.getMessage()
 	    }
@@ -345,6 +341,7 @@ apply from: "https://github.com/VeiZhang/build.gradle/blob/master/config.gradle?
 | [rxandroid][rxandroid] | [![Download][rxandroid_download]][rxandroid_latestVersion] |
 | [rxbinding][rxbinding] | [![Download][rxbinding_download]][rxbinding_latestVersion] |
 | [gson][gson] | [![Download][gson_download]][gson_latestVersion] |
+| [fastjson][fastjson] | [![Download][fastjson_download]][fastjson_latestVersion] |
 | [commons-lang3][commons-lang3] | [![Download][commons-lang3_download]][commons-lang3_latestVersion] |
 | [leakcanary][leakcanary] | [![Download][leakcanary_download]][leakcanary_latestVersion] |
 | [leakcanary-release][leakcanary-release] | [![Download][leakcanary-release_download]][leakcanary-release_latestVersion] |
@@ -432,6 +429,9 @@ apply from: "https://github.com/VeiZhang/build.gradle/blob/master/config.gradle?
 [gson]:https://github.com/google/gson
 [gson_download]:https://api.bintray.com/packages/bintray/jcenter/com.google.code.gson%3Agson/images/download.svg
 [gson_latestVersion]:https://bintray.com/bintray/jcenter/com.google.code.gson%3Agson/_latestVersion
+[fastjson]:https://github.com/alibaba/fastjson "Android版本"
+[fastjson_download]:https://api.bintray.com/packages/bintray/jcenter/com.alibaba%3Afastjson/images/download.svg?version=1.1.70.android
+[fastjson_latestVersion]:https://bintray.com/bintray/jcenter/com.alibaba%3Afastjson/1.1.70.android/link "Android版本"
 [commons-lang3]:https://github.com/apache/commons-lang
 [commons-lang3_download]:https://api.bintray.com/packages/bintray/jcenter/org.apache.commons%3Acommons-lang3/images/download.svg
 [commons-lang3_latestVersion]:https://bintray.com/bintray/jcenter/org.apache.commons%3Acommons-lang3/_latestVersion

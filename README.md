@@ -132,6 +132,7 @@ dependencies {
 	            "permission"          : "com.excellence:permission:1.0.1",
 	            // https://github.com/VeiZhang/RetrofitClient
 	            "retrofit-client"     : "com.excellence:retrofit:1.0.5",
+	            "retrofit-client2"    : "com.excellence.retrofit:retrofit2:2.0.0",
 	            // https://github.com/VeiZhang/QSkinLoader
 	            "skinloader"          : "com.excellence:skinloader:1.2.2",
 	            // https://github.com/VeiZhang/ToastKit
@@ -349,6 +350,7 @@ apply from: "https://github.com/VeiZhang/build.gradle/blob/master/config.gradle?
 | [basetools][basetools] | [![Download][basetools_download]][basetools_latestVersion] |
 | [permission][permission] | [![Download][permission_download]][permission_latestVersion] |
 | [retrofit-client][retrofit-client] | [![Download][retrofit-client_download]][retrofit-client_latestVersion] |
+| [retrofit-client2][retrofit-client2] | [![Download][retrofit-client2_download]][retrofit-client2_latestVersion] |
 | [skinloader][skinloader] | [![Download][skinloader_download]][skinloader_latestVersion] |
 | [toast][toast] | [![Download][toast_download]][toast_latestVersion] |
 | [mailsender][mailsender] | [![Download][mailsender_download]][mailsender_latestVersion] |
@@ -453,6 +455,9 @@ apply from: "https://github.com/VeiZhang/build.gradle/blob/master/config.gradle?
 [retrofit-client]:https://github.com/VeiZhang/RetrofitClient
 [retrofit-client_download]:https://api.bintray.com/packages/veizhang/maven/retrofit/images/download.svg
 [retrofit-client_latestVersion]:https://bintray.com/veizhang/maven/retrofit/_latestVersion
+[retrofit-client2]:https://github.com/VeiZhang/RetrofitClient
+[retrofit-client2_download]:https://api.bintray.com/packages/veizhang/maven/retrofit2/images/download.svg
+[retrofit-client2_latestVersion]:https://bintray.com/veizhang/maven/retrofit2/_latestVersion
 [skinloader]:https://github.com/VeiZhang/QSkinLoader
 [skinloader_download]:https://api.bintray.com/packages/veizhang/maven/skinloader/images/download.svg
 [skinloader_latestVersion]:https://bintray.com/veizhang/maven/skinloader/_latestVersion

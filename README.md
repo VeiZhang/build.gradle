@@ -124,6 +124,8 @@ dependencies {
 	            "leakcanary-fragment" : "com.squareup.leakcanary:leakcanary-support-fragment:1.6.2",
 	            // https://github.com/YoKeyword/Fragmentation
 	            "fragmentation"       : "me.yokeyword:fragmentation:1.3.6",
+	            // https://github.com/airbnb/lottie-android
+	            "lottie"              : "com.airbnb.android:lottie:3.0.0",
 	
 	            /*************************个人依赖*************************/
 	            // https://github.com/VeiZhang/BaseToolsLibrary
@@ -347,6 +349,8 @@ apply from: "https://github.com/VeiZhang/build.gradle/blob/master/config.gradle?
 | [leakcanary][leakcanary] | [![Download][leakcanary_download]][leakcanary_latestVersion] |
 | [leakcanary-release][leakcanary-release] | [![Download][leakcanary-release_download]][leakcanary-release_latestVersion] |
 | [leakcanary-fragment][leakcanary-fragment] | [![Download][leakcanary-fragment_download]][leakcanary-fragment_latestVersion] |
+| [fragmentation][fragmentation] | [![Download][fragmentation_download]][fragmentation_latestVersion] |
+| [lottie][lottie] | [![Download][lottie_download]][lottie_latestVersion] |
 | [basetools][basetools] | [![Download][basetools_download]][basetools_latestVersion] |
 | [permission][permission] | [![Download][permission_download]][permission_latestVersion] |
 | [retrofit-client][retrofit-client] | [![Download][retrofit-client_download]][retrofit-client_latestVersion] |
@@ -446,6 +450,12 @@ apply from: "https://github.com/VeiZhang/build.gradle/blob/master/config.gradle?
 [leakcanary-fragment]:https://github.com/square/leakcanary
 [leakcanary-fragment_download]:https://api.bintray.com/packages/bintray/jcenter/com.squareup.leakcanary%3Aleakcanary-support-fragment/images/download.svg
 [leakcanary-fragment_latestVersion]:https://bintray.com/bintray/jcenter/com.squareup.leakcanary%3Aleakcanary-support-fragment/_latestVersion
+[fragmentation]:https://github.com/YoKeyword/Fragmentation
+[fragmentation_download]:https://api.bintray.com/packages/yokeyword/maven/Fragmentation/images/download.svg
+[fragmentation_latestVersion]:https://bintray.com/yokeyword/maven/Fragmentation/_latestVersion
+[lottie]:https://github.com/airbnb/lottie-android
+[lottie_download]:https://api.bintray.com/packages/bintray/jcenter/com.airbnb.android%3Alottie/images/download.svg
+[lottie_latestVersion]:https://bintray.com/bintray/jcenter/com.airbnb.android%3Alottie/_latestVersion
 [basetools]:https://github.com/VeiZhang/BaseToolsLibrary
 [basetools_download]:https://api.bintray.com/packages/veizhang/maven/basetools/images/download.svg
 [basetools_latestVersion]:https://bintray.com/veizhang/maven/basetools/_latestVersion

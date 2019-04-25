@@ -217,7 +217,7 @@ dependencies {
 	 */
 	def getGitTag() {
 	    try {
-	        def process = ("git describe --abbrev=0 --tags").execute()
+	        def process = ("git describe --abbrev=0 --tags origin").execute()
 	        def tag = process.text.trim()
 	        return tag
 	    } catch (e) {
@@ -227,12 +227,12 @@ dependencies {
 	}
 	
 	/**
-	 * 以git tag的数量作为其版本号
+	 * 以git提交的数量作为其版本号
 	 * @return tag的数量
 	 */
 	def getGitVersionCode() {
 	    try {
-	        def process = ("git rev-list HEAD --first-parent --count").execute()
+	        def process = ("git rev-list --all --count").execute()
 	        def version = process.text.trim().toInteger()
 	        return version
 	    } catch (e) {

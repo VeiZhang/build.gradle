@@ -1,4 +1,9 @@
-apply from: "https://github.com/VeiZhang/build.gradle/blob/master/config.gradle?raw=true"
+/********************* 备注 *****************************/
+/**
+ * 只需要在根目录下的build.gradle中引入apply from: 'config.gradle'，其他子module则不需要引入config.gradle
+ * 或者在根目录下远程引入apply from: "https://github.com/VeiZhang/build.gradle/blob/master/config.gradle?raw=true"
+ */
+
 /*********************application通用配置*********************/
 def plugins = rootProject.ext.plugins
 def cfg = rootProject.ext.android

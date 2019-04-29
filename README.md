@@ -107,9 +107,9 @@ dependencies {
 	            "volley"              : "com.android.volley:volley:1.1.1",
 	            // https://github.com/ReactiveX/RxJava
 	            "rxjava"              : "io.reactivex:rxjava:1.3.8",
-	            "rxjava2"             : "io.reactivex.rxjava2:rxjava:2.2.2",
+	            "rxjava2"             : "io.reactivex.rxjava2:rxjava:2.2.3",
 	            "rxandroid"           : "io.reactivex:rxandroid:2.1.0",
-	            "rxandroid2"          : 'io.reactivex.rxjava2:rxandroid:2.0.2',
+	            "rxandroid2"          : 'io.reactivex.rxjava2:rxandroid:2.1.0',
 	            // https://github.com/JakeWharton/RxBinding
 	            "rxbinding"           : 'com.jakewharton.rxbinding2:rxbinding:2.2.0',
 	            // https://github.com/google/gson
@@ -281,6 +281,7 @@ dependencies {
 	**注意：**
 	1. **如果想使用ext的值，则只能在项目根目录的build.gradle中引用**
 	2. 想让单独的Module使用，则在该Module的build.gradle里引入，但是此时不能使用ext的值，否则会提示无法找到 **"Error:Cannot get property 'xxx' on extra properties extension as it does not exist"**
+	3. **如果根目录的build.gradle引入了config.gradle，则子目录不需要引入，否则可能会出现一些异常：如上传Bintray时报错**
 
 	```
 	apply from: "config.gradle"

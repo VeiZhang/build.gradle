@@ -58,8 +58,8 @@ dependencies {
 	            /*************************原生配置*************************/
 	            compileSdkVersion       : 25,
 	            buildToolsVersion       : "25.0.0",
-	            minSdkVersion           : 17,
-	            targetSdkVersion        : 23,
+	            minSdkVersion           : 15,
+	            targetSdkVersion        : 19,
 	            versionCode             : getVersionCode(),
 	            versionName             : getVersionName(),
 	
@@ -77,7 +77,7 @@ dependencies {
 	            "design"            : "com.android.support:design:${android["androidSupportSdkVersion"]}",
 	            "annotations"       : "com.android.support:support-annotations:${android["androidSupportSdkVersion"]}",
 	            "gridlayout-v7"     : "com.android.support:gridlayout-v7:${android["androidSupportSdkVersion"]}",
-	            "constraint-layout" : "com.android.support.constraint:constraint-layout:1.0.2",
+	            "constraint-layout" : "com.android.support.constraint:constraint-layout:1.1.2",
 	
 	            /*************************第三方依赖*************************/
 	            // https://github.com/square/retrofit

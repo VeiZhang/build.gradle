@@ -173,12 +173,12 @@ def getVersionCode() {
 /***********************读取Git信息***********************/
 
 /**
- * 读取最近的一次git tag
+ * 读取当前分支最近的一次git tag
  * @return tag
  */
 def getGitTag() {
     try {
-        def process = ("git describe --abbrev=0 --tags origin").execute()
+        def process = ("git describe --abbrev=0 --tags").execute()
         def tag = process.text.trim()
         return tag
     } catch (e) {

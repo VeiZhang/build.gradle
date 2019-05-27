@@ -42,6 +42,14 @@ dependencies {
 	import java.util.regex.Pattern
 	
 	ext {
+	    // 上传bintray的配置
+	    bintray = [
+	            groupId        : "com.excellence",
+	            publishVersion : "1.0.0",
+	            website        : "https://github.com/VeiZhang",
+	            licences       : ['Apache-2.0']
+	    ]
+	    
 	    // 插件
 	    plugins = [
 	            application       : "com.android.application",
@@ -148,7 +156,11 @@ dependencies {
 	            // https://github.com/VeiZhang/AndroidExec
 	            "exec"                : "com.excellence:exec:1.1.0",
 	            // https://github.com/VeiZhang/AndroidFFmpeg
-	            "ffmpeg"              : "com.excellence:ffmpeg:1.1.0",
+	            "ffmpeg"              : "com.excellence:ffmpeg:1.2.0",
+	            "ffmpeg-java"         : "com.excellence:ffmpeg-java:1.2.0",
+	            "ffmpeg-armeabi"      : "com.excellence:ffmpeg-armeabi:1.2.0",
+	            "ffmpeg-armv7a"       : "com.excellence:ffmpeg-armv7a:1.2.0",
+	            "ffmpeg-x86"          : "com.excellence:ffmpeg-x86:1.2.0",
 	            // https://github.com/VeiZhang/ImageLoader
 	            "imageloader"         : "com.excellence:imageloader:1.0.0",
 	            "imageloader-fresco"  : "com.excellence:imageloader-fresco:1.0.0",

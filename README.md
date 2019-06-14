@@ -86,38 +86,38 @@ dependencies {
 	            "annotations"       : "com.android.support:support-annotations:${android["androidSupportSdkVersion"]}",
 	            "gridlayout-v7"     : "com.android.support:gridlayout-v7:${android["androidSupportSdkVersion"]}",
 	            "constraint-layout" : "com.android.support.constraint:constraint-layout:1.1.2",
-	
+
 	            /*************************第三方依赖*************************/
 	            // https://github.com/square/retrofit
-	            "retrofit2"           : "com.squareup.retrofit2:retrofit:2.4.0",
-	            "converter-scalars"   : "com.squareup.retrofit2:converter-scalars:2.4.0",
-	            "converter-gson"      : "com.squareup.retrofit2:converter-gson:2.4.0",
-	            "adapter-rxjava"      : "com.squareup.retrofit2:adapter-rxjava:2.4.0",
-	            "adapter-rxjava2"     : "com.squareup.retrofit2:adapter-rxjava2:2.4.0",
+	            "retrofit2"           : "com.squareup.retrofit2:retrofit:2.5.0",
+	            "converter-scalars"   : "com.squareup.retrofit2:converter-scalars:2.5.0",
+	            "converter-gson"      : "com.squareup.retrofit2:converter-gson:2.5.0",
+	            "adapter-rxjava"      : "com.squareup.retrofit2:adapter-rxjava:2.5.0",
+	            "adapter-rxjava2"     : "com.squareup.retrofit2:adapter-rxjava2:2.5.0",
 	            // https://github.com/square/okhttp
-	            "okhttp"              : "com.squareup.okhttp3:okhttp:3.11.0",
+	            "okhttp"              : "com.squareup.okhttp3:okhttp:3.14.2",
 	            // https://github.com/greenrobot/greenDAO
 	            "greendao"            : "org.greenrobot:greendao:3.2.2",
 	            // https://github.com/yuweiguocn/GreenDaoUpgradeHelper
-	            "greendao-helper"     : "com.github.yuweiguocn:GreenDaoUpgradeHelper:v2.1.0",
+	            "greendao-helper"     : "io.github.yuweiguocn:GreenDaoUpgradeHelper:2.2.1",
 	            // https://github.com/bumptech/glide
-	            "glide"               : "com.github.bumptech.glide:glide:4.8.0",
+	            "glide"               : "com.github.bumptech.glide:glide:4.9.0",
 	            // https://github.com/square/picasso
 	            "picasso"             : "com.squareup.picasso:picasso:2.71828",
 	            // https://github.com/facebook/fresco
-	            "fresco"              : "com.facebook.fresco:fresco:1.10.0",
+	            "fresco"              : "com.facebook.fresco:fresco:2.0.0",
 	            // https://github.com/greenrobot/EventBus
 	            "eventbus"            : "org.greenrobot:eventbus:3.1.1",
 	            // https://github.com/BuglyDevTeam/Bugly-Android
-	            "bugly"               : "com.tencent.bugly:crashreport:2.6.6.1",
-	            "bugly-native"        : "com.tencent.bugly:nativecrashreport:3.3.1",
+	            "bugly"               : "com.tencent.bugly:crashreport:3.0.0",
+	            "bugly-native"        : "com.tencent.bugly:nativecrashreport:3.7.1",
 	            // https://bintray.com/android/android-utils/com.android.volley.volley
 	            "volley"              : "com.android.volley:volley:1.1.1",
 	            // https://github.com/ReactiveX/RxJava
 	            "rxjava"              : "io.reactivex:rxjava:1.3.8",
-	            "rxjava2"             : "io.reactivex.rxjava2:rxjava:2.2.3",
-	            "rxandroid"           : "io.reactivex:rxandroid:2.1.0",
-	            "rxandroid2"          : 'io.reactivex.rxjava2:rxandroid:2.1.0',
+	            "rxjava2"             : "io.reactivex.rxjava2:rxjava:2.2.9",
+	            "rxandroid"           : "io.reactivex:rxandroid:2.1.1",
+	            "rxandroid2"          : 'io.reactivex.rxjava2:rxandroid:2.2.0',
 	            // https://github.com/JakeWharton/RxBinding
 	            "rxbinding"           : 'com.jakewharton.rxbinding2:rxbinding:2.2.0',
 	            // https://github.com/google/gson
@@ -125,21 +125,21 @@ dependencies {
 	            // https://github.com/alibaba/fastjson
 	            "fastjson"            : "com.alibaba:fastjson:1.1.70.android",
 	            // https://github.com/apache/commons-lang
-	            "commons-lang3"       : "org.apache.commons:commons-lang3:3.8",
+	            "commons-lang3"       : "org.apache.commons:commons-lang3:3.9",
 	            // https://github.com/square/leakcanary
-	            "leakcanary"          : "com.squareup.leakcanary:leakcanary-android:1.6.2",
-	            "leakcanary-release"  : "com.squareup.leakcanary:leakcanary-android-no-op:1.6.2",
-	            "leakcanary-fragment" : "com.squareup.leakcanary:leakcanary-support-fragment:1.6.2",
+	            "leakcanary"          : "com.squareup.leakcanary:leakcanary-android:1.6.3",
+	            "leakcanary-release"  : "com.squareup.leakcanary:leakcanary-android-no-op:1.6.3",
+	            "leakcanary-fragment" : "com.squareup.leakcanary:leakcanary-support-fragment:1.6.3",
 	            // https://github.com/YoKeyword/Fragmentation
-	            "fragmentation"       : "me.yokeyword:fragmentation:1.3.6",
+	            "fragmentation"       : "me.yokeyword:fragmentation:1.3.7",
 	            // https://github.com/airbnb/lottie-android，2.8.0+是为了兼容AndroidX，没有用到AndroidX，则使用版本2.7.0，否则莫名其妙会报错
 	            "lottie"              : "com.airbnb.android:lottie:2.7.0",
-	
+
 	            /*************************个人依赖*************************/
 	            // https://github.com/VeiZhang/BaseToolsLibrary
 	            "basetools"           : "com.excellence:basetools:1.2.6",
 	            // https://github.com/VeiZhang/Permission
-	            "permission"          : "com.excellence:permission:1.0.1",
+	            "permission"          : "com.excellence:permission:1.0.2",
 	            // https://github.com/VeiZhang/RetrofitClient
 	            "retrofit-client"     : "com.excellence:retrofit:1.0.5",
 	            "retrofit-client2"    : "com.excellence.retrofit:retrofit2:2.0.0",
@@ -154,7 +154,7 @@ dependencies {
 	            // https://github.com/VeiZhang/AppStatistics
 	            "app-statistics"      : "com.excellence:app-statistics:1.0.1",
 	            // https://github.com/VeiZhang/AndroidExec
-	            "exec"                : "com.excellence:exec:1.1.0",
+	            "exec"                : "com.excellence:exec:1.1.1",
 	            // https://github.com/VeiZhang/AndroidFFmpeg
 	            "ffmpeg"              : "com.excellence:ffmpeg:1.2.1",
 	            "ffmpeg-java"         : "com.excellence:ffmpeg-java:1.2.1",
@@ -166,7 +166,9 @@ dependencies {
 	            "imageloader-fresco"  : "com.excellence:imageloader-fresco:1.0.0",
 	            "imageloader-picasso" : "com.excellence:imageloader-picasso:1.0.0",
 	            "imageloader-glide"   : "com.excellence:imageloader-glide:1.0.0"
-	    ]
+	            // https://github.com/VeiZhang/DIY-EpgView
+	            "epgview"             : "com.excellence:diy-epgview:1.0.0"
+	        ]
 	}
 	
 	/***********************APP版本控制的通用方法***********************/
@@ -376,6 +378,7 @@ apply from: "https://github.com/VeiZhang/build.gradle/blob/master/config.gradle?
 | [exec][exec] | [![Download][exec_download]][exec_latestVersion] |
 | [ffmpeg][ffmpeg] | [![Download][ffmpeg_download]][ffmpeg_latestVersion] |
 | [imageloader][imageloader] | [![Download][imageloader_download]][imageloader_latestVersion] |
+| [diy-epgview][diy-epgview] | [![Download][diy-epgview_download]][diy-epgview_latestVersion] |
 
 [config.gradle示例]:https://github.com/VeiZhang/build.gradle/blob/master/images/config.gradle.png?raw=true "config.gradle"
 [config引用]:https://github.com/VeiZhang/build.gradle/blob/master/images/config引用.png?raw=true "config引用"
@@ -505,3 +508,6 @@ apply from: "https://github.com/VeiZhang/build.gradle/blob/master/config.gradle?
 [imageloader]:https://github.com/VeiZhang/ImageLoader
 [imageloader_download]:https://api.bintray.com/packages/veizhang/maven/imageloader/images/download.svg
 [imageloader_latestVersion]:https://bintray.com/veizhang/maven/imageloader/_latestVersion
+[diy-epgview]:https://github.com/VeiZhang/DIY-EpgView
+[diy-epgview_download]:https://api.bintray.com/packages/veizhang/maven/diy-epgview/images/download.svg
+[diy-epgview_latestVersion]:https://bintray.com/veizhang/maven/diy-epgview/_latestVersion

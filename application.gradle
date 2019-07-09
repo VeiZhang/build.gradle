@@ -22,8 +22,8 @@ android {
         versionCode cfg.versionCode
         versionName cfg.versionName
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-		// 兼容高版本Android Studio
-		javaCompileOptions {
+        // 兼容高版本Android Studio
+        javaCompileOptions {
             annotationProcessorOptions {
                 includeCompileClasspath = true
             }
@@ -41,8 +41,8 @@ android {
     dataBinding {
         enabled true
     }
-	// 兼容高版本Android Studio
-	configurations.all {
+    // 兼容高版本Android Studio
+    configurations.all {
         resolutionStrategy.eachDependency { DependencyResolveDetails details ->
             def requested = details.requested
             if (requested.group == 'com.android.support') {

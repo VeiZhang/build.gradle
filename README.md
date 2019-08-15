@@ -123,7 +123,7 @@ dependencies {
                 "rxjava"                          : "io.reactivex:rxjava:1.3.8",
                 "rxjava2"                         : "io.reactivex.rxjava2:rxjava:2.2.9",
                 "rxandroid"                       : "io.reactivex:rxandroid:2.1.1",
-                "rxandroid2"                      : 'io.reactivex.rxjava2:rxandroid:2.2.0',
+                "rxandroid2"                      : 'io.reactivex.rxjava2:rxandroid:2.1.1',
                 // https://github.com/JakeWharton/RxBinding
                 "rxbinding"                       : 'com.jakewharton.rxbinding2:rxbinding:2.2.0',
                 // https://github.com/google/gson
@@ -383,6 +383,7 @@ apply from: "https://github.com/VeiZhang/build.gradle/blob/master/config.gradle?
 | [leakcanary-fragment][leakcanary-fragment] | [![Download][leakcanary-fragment_download]][leakcanary-fragment_latestVersion] |
 | [fragmentation][fragmentation] | [![Download][fragmentation_download]][fragmentation_latestVersion] |
 | [lottie][lottie] | [![Download][lottie_download]][lottie_latestVersion] |
+| [exoplayer][exoplayer] | [![Download][exoplayer_download]][exoplayer_latestVersion] |
 | [basetools][basetools] | [![Download][basetools_download]][basetools_latestVersion] |
 | [permission][permission] | [![Download][permission_download]][permission_latestVersion] |
 | [retrofit-client][retrofit-client] | [![Download][retrofit-client_download]][retrofit-client_latestVersion] |
@@ -486,6 +487,9 @@ apply from: "https://github.com/VeiZhang/build.gradle/blob/master/config.gradle?
 [fragmentation]:https://github.com/YoKeyword/Fragmentation
 [fragmentation_download]:https://api.bintray.com/packages/yokeyword/maven/Fragmentation/images/download.svg
 [fragmentation_latestVersion]:https://bintray.com/yokeyword/maven/Fragmentation/_latestVersion
+[exoplayer]:https://github.com/google/ExoPlayer
+[exoplayer_download]:
+[exoplayer_latestVersion]:
 [lottie]:https://github.com/airbnb/lottie-android
 [lottie_download]:https://api.bintray.com/packages/bintray/jcenter/com.airbnb.android%3Alottie/images/download.svg
 [lottie_latestVersion]:https://bintray.com/bintray/jcenter/com.airbnb.android%3Alottie/_latestVersion

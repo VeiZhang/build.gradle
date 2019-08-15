@@ -76,8 +76,8 @@ dependencies {
 
                 retrofit2               : "2.5.0",
                 leakcanary              : "1.6.3",
-                exoplayer               : "2.8.3",
-                ffmpeg                  : "1.2.1",
+                exoplayer               : "2.10.2",
+                ffmpeg                  : "1.2.2",
                 "imageloader"           : "1.0.0",
         ]
 
@@ -171,7 +171,7 @@ dependencies {
                 // https://github.com/VeiZhang/AppStatistics
                 "app-statistics"                  : "com.excellence:app-statistics:1.0.1",
                 // https://github.com/VeiZhang/AndroidExec
-                "exec"                            : "com.excellence:exec:1.1.1",
+                "exec"                            : "com.excellence:exec:1.1.2",
                 // https://github.com/VeiZhang/AndroidFFmpeg
                 "ffmpeg"                          : "com.excellence:ffmpeg:${android["ffmpeg"]}",
                 "ffmpeg-java"                     : "com.excellence:ffmpeg-java:${android["ffmpeg"]}",
@@ -488,8 +488,8 @@ apply from: "https://github.com/VeiZhang/build.gradle/blob/master/config.gradle?
 [fragmentation_download]:https://api.bintray.com/packages/yokeyword/maven/Fragmentation/images/download.svg
 [fragmentation_latestVersion]:https://bintray.com/yokeyword/maven/Fragmentation/_latestVersion
 [exoplayer]:https://github.com/google/ExoPlayer
-[exoplayer_download]:
-[exoplayer_latestVersion]:
+[exoplayer_download]:https://github.com/google/ExoPlayer
+[exoplayer_latestVersion]:https://github.com/google/ExoPlayer
 [lottie]:https://github.com/airbnb/lottie-android
 [lottie_download]:https://api.bintray.com/packages/bintray/jcenter/com.airbnb.android%3Alottie/images/download.svg
 [lottie_latestVersion]:https://bintray.com/bintray/jcenter/com.airbnb.android%3Alottie/_latestVersion

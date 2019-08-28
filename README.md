@@ -76,7 +76,8 @@ dependencies {
 
                 retrofit2               : "2.5.0",
                 leakcanary              : "1.6.3",
-                exoplayer               : "2.10.2",
+                exoplayer               : "2.10.4",
+                ijkplayer               : "0.8.8",
                 ffmpeg                  : "1.2.2",
                 "imageloader"           : "1.0.0",
         ]
@@ -151,6 +152,14 @@ dependencies {
                 "exoplayer-extension-mediasession": "com.google.android.exoplayer:extension-mediasession:${android["exoplayer"]}",
                 "exoplayer-extension-okhttp"      : "com.google.android.exoplayer:extension-okhttp:${android["exoplayer"]}",
                 "exoplayer-extension-rtmp"        : "com.google.android.exoplayer:extension-rtmp:${android["exoplayer"]}",
+                // https://github.com/Bilibili/ijkplayer
+                "ijkplayer-java"                  : "tv.danmaku.ijk.media:ijkplayer-java:${android["ijkplayer"]}",
+                "ijkplayer-armv7a"                : "tv.danmaku.ijk.media:ijkplayer-armv7a:${android["ijkplayer"]}"
+                "ijkplayer-armv5"                 : "tv.danmaku.ijk.media:ijkplayer-armv5:${android["ijkplayer"]}"
+                "ijkplayer-arm64"                 : "tv.danmaku.ijk.media:ijkplayer-arm64:${android["ijkplayer"]}"
+                "ijkplayer-x86"                   : "tv.danmaku.ijk.media:ijkplayer-x86:${android["ijkplayer"]}"
+                "ijkplayer-x86_64"                : "tv.danmaku.ijk.media:ijkplayer-x86_64:${android["ijkplayer"]}"
+                "ijkplayer-exo"                   : "tv.danmaku.ijk.media:ijkplayer-exo:${android["ijkplayer"]}"
 
                 /*************************个人依赖*************************/
                 // https://github.com/VeiZhang/BaseToolsLibrary
@@ -384,6 +393,7 @@ apply from: "https://github.com/VeiZhang/build.gradle/blob/master/config.gradle?
 | [fragmentation][fragmentation] | [![Download][fragmentation_download]][fragmentation_latestVersion] |
 | [lottie][lottie] | [![Download][lottie_download]][lottie_latestVersion] |
 | [exoplayer][exoplayer] | [![Download][exoplayer_download]][exoplayer_latestVersion] |
+| [ijkplayer][ijkplayer] | [![Download][ijkplayer_download]][ijkplayer_latestVersion] |
 | [basetools][basetools] | [![Download][basetools_download]][basetools_latestVersion] |
 | [permission][permission] | [![Download][permission_download]][permission_latestVersion] |
 | [retrofit-client][retrofit-client] | [![Download][retrofit-client_download]][retrofit-client_latestVersion] |
@@ -488,8 +498,11 @@ apply from: "https://github.com/VeiZhang/build.gradle/blob/master/config.gradle?
 [fragmentation_download]:https://api.bintray.com/packages/yokeyword/maven/Fragmentation/images/download.svg
 [fragmentation_latestVersion]:https://bintray.com/yokeyword/maven/Fragmentation/_latestVersion
 [exoplayer]:https://github.com/google/ExoPlayer
-[exoplayer_download]:https://github.com/google/ExoPlayer
-[exoplayer_latestVersion]:https://github.com/google/ExoPlayer
+[exoplayer_download]:https://api.bintray.com/packages/google/exoplayer/exoplayer/images/download.svg
+[exoplayer_latestVersion]:https://bintray.com/google/exoplayer/exoplayer/_latestVersion
+[ijkplayer]:https://github.com/Bilibili/ijkplayer/
+[ijkplayer_download]:https://api.bintray.com/packages/bilibili/maven/ijkplayer-java/images/download.svg
+[ijkplayer_latestVersion]:https://bintray.com/bilibili/maven/ijkplayer-java/_latestVersion
 [lottie]:https://github.com/airbnb/lottie-android
 [lottie_download]:https://api.bintray.com/packages/bintray/jcenter/com.airbnb.android%3Alottie/images/download.svg
 [lottie_latestVersion]:https://bintray.com/bintray/jcenter/com.airbnb.android%3Alottie/_latestVersion

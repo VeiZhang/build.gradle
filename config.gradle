@@ -37,7 +37,8 @@ ext {
 
             retrofit2               : "2.5.0",
             leakcanary              : "1.6.3",
-            exoplayer               : "2.10.2",
+            exoplayer               : "2.10.4",
+            ijkplayer               : "0.8.8",
             ffmpeg                  : "1.2.2",
             "imageloader"           : "1.0.0",
     ]
@@ -112,7 +113,15 @@ ext {
             "exoplayer-extension-mediasession": "com.google.android.exoplayer:extension-mediasession:${android["exoplayer"]}",
             "exoplayer-extension-okhttp"      : "com.google.android.exoplayer:extension-okhttp:${android["exoplayer"]}",
             "exoplayer-extension-rtmp"        : "com.google.android.exoplayer:extension-rtmp:${android["exoplayer"]}",
-
+            // https://github.com/Bilibili/ijkplayer
+            "ijkplayer-java"                  : "tv.danmaku.ijk.media:ijkplayer-java:${android["ijkplayer"]}",
+            "ijkplayer-armv7a"                : "tv.danmaku.ijk.media:ijkplayer-armv7a:${android["ijkplayer"]}"
+            "ijkplayer-armv5"                 : "tv.danmaku.ijk.media:ijkplayer-armv5:${android["ijkplayer"]}"
+            "ijkplayer-arm64"                 : "tv.danmaku.ijk.media:ijkplayer-arm64:${android["ijkplayer"]}"
+            "ijkplayer-x86"                   : "tv.danmaku.ijk.media:ijkplayer-x86:${android["ijkplayer"]}"
+            "ijkplayer-x86_64"                : "tv.danmaku.ijk.media:ijkplayer-x86_64:${android["ijkplayer"]}"
+            "ijkplayer-exo"                   : "tv.danmaku.ijk.media:ijkplayer-exo:${android["ijkplayer"]}"
+            
             /*************************个人依赖*************************/
             // https://github.com/VeiZhang/BaseToolsLibrary
             "basetools"                       : "com.excellence:basetools:1.2.6",

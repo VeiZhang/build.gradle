@@ -154,12 +154,12 @@ dependencies {
                 "exoplayer-extension-rtmp"        : "com.google.android.exoplayer:extension-rtmp:${android["exoplayer"]}",
                 // https://github.com/Bilibili/ijkplayer
                 "ijkplayer-java"                  : "tv.danmaku.ijk.media:ijkplayer-java:${android["ijkplayer"]}",
-                "ijkplayer-armv7a"                : "tv.danmaku.ijk.media:ijkplayer-armv7a:${android["ijkplayer"]}"
-                "ijkplayer-armv5"                 : "tv.danmaku.ijk.media:ijkplayer-armv5:${android["ijkplayer"]}"
-                "ijkplayer-arm64"                 : "tv.danmaku.ijk.media:ijkplayer-arm64:${android["ijkplayer"]}"
-                "ijkplayer-x86"                   : "tv.danmaku.ijk.media:ijkplayer-x86:${android["ijkplayer"]}"
-                "ijkplayer-x86_64"                : "tv.danmaku.ijk.media:ijkplayer-x86_64:${android["ijkplayer"]}"
-                "ijkplayer-exo"                   : "tv.danmaku.ijk.media:ijkplayer-exo:${android["ijkplayer"]}"
+                "ijkplayer-armv7a"                : "tv.danmaku.ijk.media:ijkplayer-armv7a:${android["ijkplayer"]}",
+                "ijkplayer-armv5"                 : "tv.danmaku.ijk.media:ijkplayer-armv5:${android["ijkplayer"]}",
+                "ijkplayer-arm64"                 : "tv.danmaku.ijk.media:ijkplayer-arm64:${android["ijkplayer"]}",
+                "ijkplayer-x86"                   : "tv.danmaku.ijk.media:ijkplayer-x86:${android["ijkplayer"]}",
+                "ijkplayer-x86_64"                : "tv.danmaku.ijk.media:ijkplayer-x86_64:${android["ijkplayer"]}",
+                "ijkplayer-exo"                   : "tv.danmaku.ijk.media:ijkplayer-exo:${android["ijkplayer"]}",
 
                 /*************************个人依赖*************************/
                 // https://github.com/VeiZhang/BaseToolsLibrary

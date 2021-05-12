@@ -58,142 +58,204 @@ dependencies {
                 bintray          : "com.jfrog.bintray",
                 novoda           : "com.novoda.bintray-release",
                 greendao         : "org.greenrobot.greendao",
-                "greendao-gradle": "org.greenrobot:greendao-gradle-plugin:3.2.2"
+                "greendao-gradle": "org.greenrobot:greendao-gradle-plugin:3.2.2",
+                "safeargs"       : "androidx.navigation.safeargs"
         ]
 
         // 配置
         android = [
                 /*************************原生配置*************************/
-                compileSdkVersion       : 25,
-                buildToolsVersion       : "25.0.0",
+                compileSdkVersion       : 28,
+                buildToolsVersion       : "28.0.0",
                 minSdkVersion           : 15,
                 targetSdkVersion        : 19,
                 versionCode             : getVersionCode(),
                 versionName             : getVersionName(),
 
                 /*************************自定义配置*************************/
-                androidSupportSdkVersion: "23.0.0",
+                androidSupportSdkVersion: "28.0.0",
+                navigationVersion       : "2.1.0",
 
-                retrofit2               : "2.5.0",
-                leakcanary              : "1.6.3",
-                exoplayer               : "2.10.4",
-                ijkplayer               : "0.8.8",
+                retrofit2               : "2.6.2",
+                leakcanary              : "2.5",
+                exoplayer               : "2.13.3",
                 ffmpeg                  : "1.2.2",
                 "imageloader"           : "1.0.0",
+                "glide"                 : "4.11.0"
         ]
 
         // 依赖
         dependencies = [
                 /*************************原生依赖*************************/
-                "appcompat-v7"                    : "com.android.support:appcompat-v7:${android["androidSupportSdkVersion"]}",
-                "support-v4"                      : "com.android.support:support-v4:${android["androidSupportSdkVersion"]}",
-                "cardview-v7"                     : "com.android.support:cardview-v7:${android["androidSupportSdkVersion"]}",
-                "recyclerview-v7"                 : "com.android.support:recyclerview-v7:${android["androidSupportSdkVersion"]}",
-                "design"                          : "com.android.support:design:${android["androidSupportSdkVersion"]}",
-                "annotations"                     : "com.android.support:support-annotations:${android["androidSupportSdkVersion"]}",
-                "gridlayout-v7"                   : "com.android.support:gridlayout-v7:${android["androidSupportSdkVersion"]}",
-                "constraint-layout"               : "com.android.support.constraint:constraint-layout:1.1.2",
+                "appcompat-v7"                      : "com.android.support:appcompat-v7:${android["androidSupportSdkVersion"]}",
+                "support-v4"                        : "com.android.support:support-v4:${android["androidSupportSdkVersion"]}",
+                "cardview-v7"                       : "com.android.support:cardview-v7:${android["androidSupportSdkVersion"]}",
+                "recyclerview-v7"                   : "com.android.support:recyclerview-v7:${android["androidSupportSdkVersion"]}",
+                "design"                            : "com.android.support:design:${android["androidSupportSdkVersion"]}",
+                "annotations"                       : "com.android.support:support-annotations:${android["androidSupportSdkVersion"]}",
+                "gridlayout-v7"                     : "com.android.support:gridlayout-v7:${android["androidSupportSdkVersion"]}",
+                "constraint-layout"                 : "com.android.support.constraint:constraint-layout:1.1.2",
+                "leanback"                          : "androidx.leanback:leanback:1.0.0",
+
+                /*************************Jetpack*************************/
+                // AndroidX: https://developer.android.google.cn/jetpack/androidx/versions
+                "androidx-appcompat"                : "androidx.appcompat:appcompat:1.1.0",
+                "androidx-support-v4"               : "androidx.legacy:legacy-support-v4:1.0.0",
+                "androidx-cardview"                 : "androidx.cardview:cardview:1.0.0",
+                "androidx-recyclerview"             : "androidx.recyclerview:recyclerview:1.0.0",
+                "androidx-annotations"              : "androidx.annotation:annotation:1.1.0",
+                "androidx-gridlayout"               : "androidx.gridlayout:gridlayout:1.0.0",
+                "androidx-constraintlayout"         : "androidx.constraintlayout:constraintlayout:1.1.3",
+                "androidx-navigation-fragment"      : "androidx.navigation:navigation-fragment:${android["navigationVersion"]}",
+                "androidx-navigation-ui"            : "androidx.navigation:navigation-ui:${android["navigationVersion"]}",
+                "androidx-lifecycle-extensions"     : "androidx.lifecycle:lifecycle-extensions:2.1.0",
+                "androidx-lifecycle-compiler"       : "androidx.lifecycle:lifecycle-compiler:2.1.0",
+                "androidx-lifecycle-reactivestreams": "androidx.lifecycle:lifecycle-reactivestreams:2.1.0",
+                "androidx-room-runtime"             : "androidx.room:room-runtime:2.1.0",
+                "androidx-room-rxjava2"             : "androidx.room:room-rxjava2:2.1.0",
+                "androidx-room-compiler"            : "androidx.room:room-compiler:2.1.0",
+                // https://github.com/material-components/material-components-android
+                "material"                          : "com.google.android.material:material:1.0.0",
 
                 /*************************第三方依赖*************************/
                 // https://github.com/square/retrofit
-                "retrofit2"                       : "com.squareup.retrofit2:retrofit:${android["retrofit2"]}",
-                "converter-scalars"               : "com.squareup.retrofit2:converter-scalars:${android["retrofit2"]}",
-                "converter-gson"                  : "com.squareup.retrofit2:converter-gson:${android["retrofit2"]}",
-                "adapter-rxjava"                  : "com.squareup.retrofit2:adapter-rxjava:${android["retrofit2"]}",
-                "adapter-rxjava2"                 : "com.squareup.retrofit2:adapter-rxjava2:${android["retrofit2"]}",
+                "retrofit2"                         : "com.squareup.retrofit2:retrofit:${android["retrofit2"]}",
+                "converter-scalars"                 : "com.squareup.retrofit2:converter-scalars:${android["retrofit2"]}",
+                "converter-gson"                    : "com.squareup.retrofit2:converter-gson:${android["retrofit2"]}",
+                "adapter-rxjava"                    : "com.squareup.retrofit2:adapter-rxjava:${android["retrofit2"]}",
+                "adapter-rxjava2"                   : "com.squareup.retrofit2:adapter-rxjava2:${android["retrofit2"]}",
                 // https://github.com/square/okhttp
-                "okhttp"                          : "com.squareup.okhttp3:okhttp:3.14.2",
+                "okhttp"                            : "com.squareup.okhttp3:okhttp:4.2.1",
+                "okhttp-logging"                    : "com.squareup.okhttp3:logging-interceptor:4.2.1",
                 // https://github.com/greenrobot/greenDAO
-                "greendao"                        : "org.greenrobot:greendao:3.2.2",
+                "greendao"                          : "org.greenrobot:greendao:3.2.2",
                 // https://github.com/yuweiguocn/GreenDaoUpgradeHelper
-                "greendao-helper"                 : "io.github.yuweiguocn:GreenDaoUpgradeHelper:2.2.1",
+                "greendao-helper"                   : "io.github.yuweiguocn:GreenDaoUpgradeHelper:2.2.1",
                 // https://github.com/bumptech/glide
-                "glide"                           : "com.github.bumptech.glide:glide:4.9.0",
+                "glide"                             : "com.github.bumptech.glide:glide:${android["glide"]}",
+                "glide-compiler"                    : "com.github.bumptech.glide:compiler:${android["glide"]}",
+                "glide-okhttp"                      : "com.github.bumptech.glide:okhttp3-integration:${android["glide"]}",
                 // https://github.com/square/picasso
-                "picasso"                         : "com.squareup.picasso:picasso:2.71828",
+                "picasso"                           : "com.squareup.picasso:picasso:2.71828",
                 // https://github.com/facebook/fresco
-                "fresco"                          : "com.facebook.fresco:fresco:2.0.0",
+                "fresco"                            : "com.facebook.fresco:fresco:2.0.0",
                 // https://github.com/greenrobot/EventBus
-                "eventbus"                        : "org.greenrobot:eventbus:3.1.1",
+                "eventbus"                          : "org.greenrobot:eventbus:3.1.1",
                 // https://github.com/BuglyDevTeam/Bugly-Android
-                "bugly"                           : "com.tencent.bugly:crashreport:3.0.0",
-                "bugly-native"                    : "com.tencent.bugly:nativecrashreport:3.7.1",
+                "bugly"                             : "com.tencent.bugly:crashreport:3.0.0",
+                "bugly-native"                      : "com.tencent.bugly:nativecrashreport:3.7.1",
                 // https://bintray.com/android/android-utils/com.android.volley.volley
-                "volley"                          : "com.android.volley:volley:1.1.1",
+                "volley"                            : "com.android.volley:volley:1.1.1",
                 // https://github.com/ReactiveX/RxJava
-                "rxjava"                          : "io.reactivex:rxjava:1.3.8",
-                "rxjava2"                         : "io.reactivex.rxjava2:rxjava:2.2.9",
-                "rxandroid"                       : "io.reactivex:rxandroid:2.1.1",
-                "rxandroid2"                      : 'io.reactivex.rxjava2:rxandroid:2.1.1',
+                "rxjava"                            : "io.reactivex:rxjava:1.3.8",
+                "rxjava2"                           : "io.reactivex.rxjava2:rxjava:2.2.9",
+                "rxandroid"                         : "io.reactivex:rxandroid:2.1.1",
+                "rxandroid2"                        : 'io.reactivex.rxjava2:rxandroid:2.1.1',
                 // https://github.com/JakeWharton/RxBinding
-                "rxbinding"                       : 'com.jakewharton.rxbinding2:rxbinding:2.2.0',
+                "rxbinding"                         : 'com.jakewharton.rxbinding3:rxbinding-leanback:3.0.0',
                 // https://github.com/google/gson
-                "gson"                            : "com.google.code.gson:gson:2.8.5",
+                "gson"                              : "com.google.code.gson:gson:2.8.5",
                 // https://github.com/alibaba/fastjson
-                "fastjson"                        : "com.alibaba:fastjson:1.1.70.android",
+                "fastjson"                          : "com.alibaba:fastjson:1.1.70.android",
                 // https://github.com/apache/commons-lang
-                "commons-lang3"                   : "org.apache.commons:commons-lang3:3.9",
+                "commons-lang3"                     : "org.apache.commons:commons-lang3:3.9",
+                // https://github.com/apache/commons-net
+                "commons-net"                       : "commons-net:commons-net:3.8.0",
                 // https://github.com/square/leakcanary
-                "leakcanary"                      : "com.squareup.leakcanary:leakcanary-android:${android["leakcanary"]}",
-                "leakcanary-release"              : "com.squareup.leakcanary:leakcanary-android-no-op:${android["leakcanary"]}",
-                "leakcanary-fragment"             : "com.squareup.leakcanary:leakcanary-support-fragment:${android["leakcanary"]}",
+                "leakcanary"                        : "com.squareup.leakcanary:leakcanary-android:${android["leakcanary"]}",
                 // https://github.com/YoKeyword/Fragmentation
-                "fragmentation"                   : "me.yokeyword:fragmentation:1.3.7",
+                "fragmentation"                     : "me.yokeyword:fragmentation:1.3.7",
+                // https://github.com/DreaminginCodeZH/MaterialRatingBar
+                "materialratingbar"                 : "me.zhanghai.android.materialratingbar:library:1.3.2",
                 // https://github.com/airbnb/lottie-android，2.8.0+是为了兼容AndroidX，没有用到AndroidX，则使用版本2.7.0，否则莫名其妙会报错
-                "lottie"                          : "com.airbnb.android:lottie:2.7.0",
+                "lottie"                            : "com.airbnb.android:lottie:2.7.0",
                 // https://github.com/google/ExoPlayer，2.8.4+是为了兼容AndroidX
-                "exoplayer"                       : "com.google.android.exoplayer:exoplayer:${android["exoplayer"]}",
-                "exoplayer-core"                  : "com.google.android.exoplayer:exoplayer-core:${android["exoplayer"]}",
-                "exoplayer-dash"                  : "com.google.android.exoplayer:exoplayer-dash:${android["exoplayer"]}",
-                "exoplayer-hls"                   : "com.google.android.exoplayer:exoplayer-hls:${android["exoplayer"]}",
-                "exoplayer-smoothstreaming"       : "com.google.android.exoplayer:exoplayer-smoothstreaming:${android["exoplayer"]}",
-                "exoplayer-ui"                    : "com.google.android.exoplayer:exoplayer-ui:${android["exoplayer"]}",
-                "exoplayer-extension-gvr"         : "com.google.android.exoplayer:extension-gvr:${android["exoplayer"]}",
-                "exoplayer-extension-mediasession": "com.google.android.exoplayer:extension-mediasession:${android["exoplayer"]}",
-                "exoplayer-extension-okhttp"      : "com.google.android.exoplayer:extension-okhttp:${android["exoplayer"]}",
-                "exoplayer-extension-rtmp"        : "com.google.android.exoplayer:extension-rtmp:${android["exoplayer"]}",
-                // https://github.com/Bilibili/ijkplayer
-                "ijkplayer-java"                  : "tv.danmaku.ijk.media:ijkplayer-java:${android["ijkplayer"]}",
-                "ijkplayer-armv7a"                : "tv.danmaku.ijk.media:ijkplayer-armv7a:${android["ijkplayer"]}",
-                "ijkplayer-armv5"                 : "tv.danmaku.ijk.media:ijkplayer-armv5:${android["ijkplayer"]}",
-                "ijkplayer-arm64"                 : "tv.danmaku.ijk.media:ijkplayer-arm64:${android["ijkplayer"]}",
-                "ijkplayer-x86"                   : "tv.danmaku.ijk.media:ijkplayer-x86:${android["ijkplayer"]}",
-                "ijkplayer-x86_64"                : "tv.danmaku.ijk.media:ijkplayer-x86_64:${android["ijkplayer"]}",
-                "ijkplayer-exo"                   : "tv.danmaku.ijk.media:ijkplayer-exo:${android["ijkplayer"]}",
+                "exoplayer"                         : "com.google.android.exoplayer:exoplayer:${android["exoplayer"]}",
+                "exoplayer-core"                    : "com.google.android.exoplayer:exoplayer-core:${android["exoplayer"]}",
+                "exoplayer-dash"                    : "com.google.android.exoplayer:exoplayer-dash:${android["exoplayer"]}",
+                "exoplayer-hls"                     : "com.google.android.exoplayer:exoplayer-hls:${android["exoplayer"]}",
+                "exoplayer-smoothstreaming"         : "com.google.android.exoplayer:exoplayer-smoothstreaming:${android["exoplayer"]}",
+                "exoplayer-ui"                      : "com.google.android.exoplayer:exoplayer-ui:${android["exoplayer"]}",
+                "exoplayer-extension-ima"           : "com.google.android.exoplayer:extension-ima:${android["exoplayer"]}",
+                "exoplayer-extension-rtmp"          : "com.google.android.exoplayer:extension-rtmp:${android["exoplayer"]}",
+                "exoplayer-extension-gvr"           : "com.google.android.exoplayer:extension-gvr:${android["exoplayer"]}",
+                "exoplayer-extension-mediasession"  : "com.google.android.exoplayer:extension-mediasession:${android["exoplayer"]}",
+                "exoplayer-extension-okhttp"        : "com.google.android.exoplayer:extension-okhttp:${android["exoplayer"]}",
+                "exoplayer-extension-cast"          : "com.google.android.exoplayer:extension-cast:${android["exoplayer"]}",
+                "exoplayer-extension-cronet"        : "com.google.android.exoplayer:extension-cronet:${android["exoplayer"]}",
+                "exoplayer-extension-leanback"      : "com.google.android.exoplayer:extension-leanback:${android["exoplayer"]}",
+                "exoplayer-extension-jobdispatcher" : "com.google.android.exoplayer:extension-jobdispatcher:${android["exoplayer"]}",
+                "exoplayer-extension-workmanager"   : "com.google.android.exoplayer:extension-workmanager:${android["exoplayer"]}",
+                // https://github.com/zaclimon/Tsutaeru
+                "xipl"                              : "com.zaclimon:xipl:0.2.2",
+                "tiflibrary"                        : "com.zaclimon:tiflibrary:0.2.2",
+                // https://github.com/SufficientlySecure/html-textview
+                "html-text"                         : "org.sufficientlysecure:html-textview:3.9",
+                // https://developers.google.com/youtube/android/player
+                // https://github.com/bertrandmartel/youtubetv.git
+                // https://github.com/VeiZhang/youtubetv
+                "youtubetv"                         : "com.excellence:youtubetv:1.0.3-RC2",
+                "smarttube"                         : "com.excellence:smarttube:1.0.0-RC1",
+                // https://github.com/averyzhong/SubtitleForAndroid
+                // https://github.com/VeiZhang/SubtitleForAndroid
+                "android-external-subtitle"         : "com.excellence:subtitle:1.0.1",
+
+                "upgrader"                          : "com.excellence:upgrader:1.1.9",
+                "upgrader-pure"                     : "com.excellence:upgrader-pure:1.1.9",
+                "autodispose"                       : "com.uber.autodispose:autodispose:0.6.1",
+                "autodispose-android-arch"          : "com.uber.autodispose:autodispose-android-archcomponents:0.6.1",
+                "zxing-core"                        : "com.google.zxing:core:3.4.1",
+                "opensubtitle"                      : "com.github.wtekiela:opensub4j:0.4.0",
+                "xml-apis"                          : "xml-apis:xml-apis:2.0.2",
 
                 /*************************个人依赖*************************/
                 // https://github.com/VeiZhang/BaseToolsLibrary
-                "basetools"                       : "com.excellence:basetools:1.2.6",
+                "basetools"                         : "com.excellence:basetools:1.2.9-RC3",
                 // https://github.com/VeiZhang/Permission
-                "permission"                      : "com.excellence:permission:1.0.2",
+                "permission"                        : "com.excellence:permission:1.0.2",
                 // https://github.com/VeiZhang/RetrofitClient
-                "retrofit-client"                 : "com.excellence:retrofit:1.0.5",
-                "retrofit-client2"                : "com.excellence.retrofit:retrofit2:2.0.0",
+                "retrofit-client"                   : "com.excellence:retrofit:1.0.5",
+                "retrofit-client2"                  : "com.excellence.retrofit:retrofit2:2.0.0",
                 // https://github.com/VeiZhang/QSkinLoader
-                "skinloader"                      : "com.excellence:skinloader:1.2.2",
+                "skinloader"                        : "com.excellence:skinloader:1.2.2",
                 // https://github.com/VeiZhang/ToastKit
-                "toast"                           : "com.excellence:toast:1.1.0",
+                "toast"                             : "com.excellence:toast:1.1.0",
                 // https://github.com/VeiZhang/MailSender
-                "mailsender"                      : "com.excellence:mailsender:1.0.0",
+                "mailsender"                        : "com.excellence:mailsender:1.0.0",
                 // https://github.com/VeiZhang/Downloader
-                "downloader"                      : "com.excellence:downloader:1.2.0",
+                "downloader"                        : "com.excellence:downloader:1.2.0",
                 // https://github.com/VeiZhang/AppStatistics
-                "app-statistics"                  : "com.excellence:app-statistics:1.0.1",
+                "app-statistics"                    : "com.excellence:app-statistics:1.0.1",
                 // https://github.com/VeiZhang/AndroidExec
-                "exec"                            : "com.excellence:exec:1.1.2",
+                "exec"                              : "com.excellence:exec:1.1.2",
                 // https://github.com/VeiZhang/AndroidFFmpeg
-                "ffmpeg"                          : "com.excellence:ffmpeg:${android["ffmpeg"]}",
-                "ffmpeg-java"                     : "com.excellence:ffmpeg-java:${android["ffmpeg"]}",
-                "ffmpeg-armeabi"                  : "com.excellence:ffmpeg-armeabi:${android["ffmpeg"]}",
-                "ffmpeg-armv7a"                   : "com.excellence:ffmpeg-armv7a:${android["ffmpeg"]}",
-                "ffmpeg-x86"                      : "com.excellence:ffmpeg-x86:${android["ffmpeg"]}",
+                "ffmpeg"                            : "com.excellence:ffmpeg:${android["ffmpeg"]}",
+                "ffmpeg-java"                       : "com.excellence:ffmpeg-java:${android["ffmpeg"]}",
+                "ffmpeg-armeabi"                    : "com.excellence:ffmpeg-armeabi:${android["ffmpeg"]}",
+                "ffmpeg-armv7a"                     : "com.excellence:ffmpeg-armv7a:${android["ffmpeg"]}",
+                "ffmpeg-x86"                        : "com.excellence:ffmpeg-x86:${android["ffmpeg"]}",
                 // https://github.com/VeiZhang/ImageLoader
-                "imageloader"                     : "com.excellence:imageloader:${android["imageloader"]}",
-                "imageloader-fresco"              : "com.excellence:imageloader-fresco:${android["imageloader"]}",
-                "imageloader-picasso"             : "com.excellence:imageloader-picasso:${android["imageloader"]}",
-                "imageloader-glide"               : "com.excellence:imageloader-glide:${android["imageloader"]}",
-                // https://github.com/VeiZhang/DIY-EpgView
-                "epgview"                         : "com.excellence:diy-epgview:1.0.2"
+                "imageloader"                       : "com.excellence:imageloader:${android["imageloader"]}",
+                "imageloader-fresco"                : "com.excellence:imageloader-fresco:${android["imageloader"]}",
+                "imageloader-picasso"               : "com.excellence:imageloader-picasso:${android["imageloader"]}",
+                "imageloader-glide"                 : "com.excellence:imageloader-glide:${android["imageloader"]}",
+                // http://192.168.1.239/common_library/timeshift
+                "timeshift"                         : "com.excellence:timeshift:2.0.3",
+                // https://github.com/orhanobut/logger
+                "logger"                            : "com.orhanobut:logger:2.2.0",
+                "work"                              : "androidx.work:work-runtime:2.3.3",
+                "work-rxjava2"                      : "androidx.work:work-rxjava2:2.3.3",
+                "guava"                             : "com.google.guava:guava:28.1-android",
+                // https://github.com/Dimezis/BlurView
+                "blurview"                          : "com.eightbitlab:blurview:1.6.3",
+                // https://github.com/SufficientlySecure/html-textview
+                "html-textview"                     : "org.sufficientlysecure:html-textview:3.9",
+                // https://github.com/VeiZhang/DIY-EpgView (Discard)
+                "diy-epgview"                       : "com.excellence:diy-epgview:1.0.2",
+                // http://192.168.1.239/widget/LeanbackEpgView (Discard)
+                "leanbackepgview"                   : "com.excellence:leanback-epgview:1.0",
+                // http://192.168.1.239/widget/epgview
+                "epgview"                           : "com.excellence:epgview:2.3"
         ]
     }
 
@@ -340,7 +402,7 @@ dependencies {
 远程配置配置其他步骤与[本地配置](#本地配置)是一样，不同的是引用的方式，导入的不是路径里的文件，而是一个文件链接
 
 ```
-apply from: "https://github.com/VeiZhang/build.gradle/blob/master/config.gradle?raw=true"
+apply from: 'https://gist.githubusercontent.com/VeiZhang/0af7b332e757362784467648fed7d7ef/raw/config.gradle'
 ```
 
 ![远程配置引用][远程配置引用]
@@ -361,6 +423,8 @@ apply from: "https://github.com/VeiZhang/build.gradle/blob/master/config.gradle?
 
 
 ## 第三方依赖版本
+
+**由于Bintray抛弃了我们，迁移至[GitHub Packages][GitHub Packages]**
 
 | 依赖 | 版本 |
 | --- | ---- |
@@ -415,6 +479,8 @@ apply from: "https://github.com/VeiZhang/build.gradle/blob/master/config.gradle?
 [继承方式]:https://github.com/VeiZhang/build.gradle/blob/master/images/%E7%BB%A7%E6%89%BF%E6%96%B9%E5%BC%8F.png?raw=true "继承方式"
 [config.gradle]:https://github.com/VeiZhang/BaseToolsLibrary/blob/master/config.gradle
 [application.gradle]:https://github.com/VeiZhang/BaseToolsLibrary/blob/master/application.gradle
+
+[GitHub Packages]:https://github.com/VeiZhang/GitHubPackages-Android
 
 [retrofit2]:https://github.com/square/retrofit
 [retrofit2_download]:https://api.bintray.com/packages/bintray/jcenter/com.squareup.retrofit2%3Aretrofit/images/download.svg

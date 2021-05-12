@@ -419,7 +419,7 @@ apply from: 'https://gist.githubusercontent.com/VeiZhang/0af7b332e75736278446764
 
 ## 示例
 
-* https://github.com/VeiZhang/BaseToolsLibrary 中 [config.gradle][config.gradle]、[application.gradle][application.gradle]
+* https://github.com/VeiZhang/BaseToolsLibrary 中 [config.gradle][config.gradle]、[application.gradle][application.gradle]、[library.gradle][library.gradle]
 
 
 ## 第三方依赖版本
@@ -477,8 +477,9 @@ apply from: 'https://gist.githubusercontent.com/VeiZhang/0af7b332e75736278446764
 [config使用]:https://github.com/VeiZhang/build.gradle/blob/master/images/config使用.png?raw=true "config使用"
 [远程配置引用]:https://github.com/VeiZhang/build.gradle/blob/master/images/%E8%BF%9C%E7%A8%8B%E9%85%8D%E7%BD%AE%E5%BC%95%E7%94%A8.png?raw=true "远程配置引用"
 [继承方式]:https://github.com/VeiZhang/build.gradle/blob/master/images/%E7%BB%A7%E6%89%BF%E6%96%B9%E5%BC%8F.png?raw=true "继承方式"
-[config.gradle]:https://github.com/VeiZhang/BaseToolsLibrary/blob/master/config.gradle
-[application.gradle]:https://github.com/VeiZhang/BaseToolsLibrary/blob/master/application.gradle
+[config.gradle]:https://gist.github.com/VeiZhang/0af7b332e757362784467648fed7d7ef
+[application.gradle]:https://gist.github.com/VeiZhang/01779005843bc5b70b11551ca13c2ced
+[library.gradle]:https://gist.github.com/VeiZhang/f703697d56fe717c3433f4218f296b36
 
 [GitHub Packages]:https://github.com/VeiZhang/GitHubPackages-Android
 
